@@ -22,6 +22,7 @@ namespace WindowsFormsApplication1
             String förnamn = förnamnBox.Text;
             String efternamn = efternamBox.Text;
             namePlate.Text = "Hej, " + förnamn + " " + efternamn + "!";
+            allaNamn.Text += förnamn + " " + efternamn + "\r\n";
         }
     }
 }

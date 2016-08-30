@@ -32,6 +32,8 @@
             this.namePlate = new System.Windows.Forms.Label();
             this.förnamnBox = new System.Windows.Forms.TextBox();
             this.efternamBox = new System.Windows.Forms.TextBox();
+            this.allaNamn = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -67,11 +69,32 @@
             this.efternamBox.Size = new System.Drawing.Size(100, 20);
             this.efternamBox.TabIndex = 3;
             // 
+            // allaNamn
+            // 
+            this.allaNamn.Enabled = false;
+            this.allaNamn.Location = new System.Drawing.Point(63, 235);
+            this.allaNamn.Multiline = true;
+            this.allaNamn.Name = "allaNamn";
+            this.allaNamn.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.allaNamn.Size = new System.Drawing.Size(206, 168);
+            this.allaNamn.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(63, 216);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "andra som har varit här";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(844, 467);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.allaNamn);
             this.Controls.Add(this.efternamBox);
             this.Controls.Add(this.förnamnBox);
             this.Controls.Add(this.namePlate);
@@ -89,6 +112,8 @@
         private System.Windows.Forms.Label namePlate;
         private System.Windows.Forms.TextBox förnamnBox;
         private System.Windows.Forms.TextBox efternamBox;
+        private System.Windows.Forms.TextBox allaNamn;
+        private System.Windows.Forms.Label label1;
     }
 }
 
