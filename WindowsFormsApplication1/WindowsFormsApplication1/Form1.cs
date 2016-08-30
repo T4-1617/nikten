@@ -19,8 +19,9 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String namn = textBox1.Text;
-            namePlate.Text = "Hej, " + namn + "!";
+            String förnamn = förnamnBox.Text;
+            String efternamn = efternamBox.Text;
+            namePlate.Text = "Hej, " + förnamn + " " + efternamn + "!";
         }
     }
 }
