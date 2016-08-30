@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace G  ithub_test
+namespace Github_test
 {
     class Program
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("hello world");
         }
     }
 }
