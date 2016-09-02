@@ -22,6 +22,7 @@ namespace battleship_console
             Random r = new Random();
             int random_amount_of_bs = r.Next(3, 6); //BS = battleships
 
+            //create battlemap
             for (int y = 0; y < 5; y++)
             {
                 for (int x = 0; x < 7; x++)
@@ -30,6 +31,7 @@ namespace battleship_console
                 }
             }
 
+            //create ships
             for (int i = 0; i < random_amount_of_bs; i++)
             {
                 int Xpos = r.Next(0, 6);
@@ -48,18 +50,39 @@ namespace battleship_console
             */
 
             int current_amount_of_bs = random_amount_of_bs;
+            int shots_fired = 0;
 
             for (int i = 0; i < current_amount_of_bs; i = i)
             {
                 Console.WriteLine("Skepapr kvar: " + current_amount_of_bs);
-                Console.ReadLine();
+                Console.WriteLine("Mata in X koordinat för kanoner att skjuta: ");
+                int inx = int.Parse(Console.ReadLine());
+                Console.WriteLine("Mata in Y koordinat för kanoner att skjuta: ");
+                int iny = int.Parse(Console.ReadLine());
+
+                if (check_coord(inx, iny))
+                {
+                    GameMap[inx, iny] = false;
+                    Console.Beep(420, 150);
+                    Console.WriteLine("Du träffade!");
+                    current_amount_of_bs--;
+                }
+                else
+                {
+                    Console.WriteLine("Du missade!");
+
+                }
+                shots_fired++;
+                Console.WriteLine("Skott avfyrade: " + shots_fired);
+
             }
+            Console.WriteLine("Du vann! Tryck på en knapp för att avsluta programmet.");
             Console.ReadLine();
+            
 
         }
-        //Slut på daniels kod
 
-        //Början på Alekseis kod
+        //Början på Alekseis metoder
         static bool check_coord(int x, int y) //
         {
             if (GameMap[x, y] == true)
