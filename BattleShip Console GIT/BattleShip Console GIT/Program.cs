@@ -31,6 +31,10 @@ namespace battleship_console
                 }
             }
 
+            //DEBUG
+            Console.WriteLine("Debug: " + GameMap.GetLength(1)); 
+
+
             //create ships
             for (int i = 0; i < random_amount_of_bs; i++)
             {
@@ -66,11 +70,12 @@ namespace battleship_console
                     Console.Beep(420, 150);
                     Console.WriteLine("Du träffade!");
                     current_amount_of_bs--;
+                    Draw_game_map(inx, iny);
                 }
                 else
                 {
                     Console.WriteLine("Du missade!");
-
+                    Draw_game_map(inx, iny);
                 }
                 shots_fired++;
                 Console.WriteLine("Skott avfyrade: " + shots_fired);
@@ -78,7 +83,7 @@ namespace battleship_console
             }
             Console.WriteLine("Du vann! Tryck på en knapp för att avsluta programmet.");
             Console.ReadLine();
-            
+
 
         }
 
@@ -95,5 +100,27 @@ namespace battleship_console
             }
         }
         //Slut på Alekseis kod
+
+        //Mer kod av daniel
+        static void Draw_game_map(int Xpos, int Ypos)
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 6; j++)
+                {
+                    if (check_coord(j, i))
+                    {
+                        Console.Write("X");
+                    }
+                    else
+                    {
+                        Console.Write("O");
+                    }
+
+                }
+                Console.WriteLine();
+            }
+
+        }
     }
 }
