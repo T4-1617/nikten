@@ -60,9 +60,9 @@ namespace battleship_console
             {
                 Console.WriteLine("Skepapr kvar: " + current_amount_of_bs);
                 Console.WriteLine("Mata in X koordinat för kanoner att skjuta: ");
-                int inx = int.Parse(Console.ReadLine());
+                int inx = int.Parse(Console.ReadLine()) - 1;
                 Console.WriteLine("Mata in Y koordinat för kanoner att skjuta: ");
-                int iny = int.Parse(Console.ReadLine());
+                int iny = int.Parse(Console.ReadLine()) - 1;
 
                 if (check_coord(inx, iny))
                 {
@@ -70,12 +70,12 @@ namespace battleship_console
                     Console.Beep(420, 150);
                     Console.WriteLine("Du träffade!");
                     current_amount_of_bs--;
-                    Draw_game_map(inx, iny);
+                    Draw_game_map(inx, iny, true);
                 }
                 else
                 {
                     Console.WriteLine("Du missade!");
-                    Draw_game_map(inx, iny);
+                    Draw_game_map(inx, iny, false);
                 }
                 shots_fired++;
                 Console.WriteLine("Skott avfyrade: " + shots_fired);
@@ -102,13 +102,13 @@ namespace battleship_console
         //Slut på Alekseis kod
 
         //Mer kod av daniel
-        static void Draw_game_map(int Xpos, int Ypos)
+        static void Draw_game_map(int Xpos, int Ypos, bool hit) //dra
         {
             for (int i = 0; i < 4; i++)
             {
                 for (int j = 0; j < 6; j++)
                 {
-                    if (check_coord(j, i))
+                    if (j == Xpos && i == Ypos && hit)
                     {
                         Console.Write("X");
                     }
@@ -116,7 +116,6 @@ namespace battleship_console
                     {
                         Console.Write("O");
                     }
-
                 }
                 Console.WriteLine();
             }
