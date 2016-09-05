@@ -44,9 +44,10 @@ namespace kortlek_consloe_uppgift
             {
                 type_of_card = r.Next(0, 3) + 1; //Add one so it will start at one and go up to 4.
                 number_of_card = r.Next(0, 12) + 1; //Add one so it will start at one and go up to 4.
-                Console.ReadLine();
                 if (card[type_of_card, number_of_card] == 0)
                 {
+                    Console.WriteLine("Tryck enter för ett nyt kort");
+                    Console.ReadLine();
                     switch (type_of_card)
                     {
                         case 1:
@@ -139,6 +140,7 @@ namespace kortlek_consloe_uppgift
                             }
                     }
                     Console.WriteLine(type + " " + number);
+                    card[type_of_card, number_of_card] = 1;
 
                 }
                 else
