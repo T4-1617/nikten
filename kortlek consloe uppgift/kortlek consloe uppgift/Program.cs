@@ -28,7 +28,7 @@ namespace kortlek_consloe_uppgift
 
             for (int i = 0; i < 4; i++)
             {
-                for (int j = 0; j < 13; i++)
+                for (int j = 0; j < 13; j++)
                 {
                    card[i, j] = 0; //0 means not drawn. 1 means drawn.
                 }
@@ -37,11 +37,13 @@ namespace kortlek_consloe_uppgift
             Console.WriteLine("Tryck enter för att dra ett kort");
             Console.ReadLine();
             Random r = new Random();
-            int type_of_card = r.Next(0, 3) + 1; // deterimin what card type. Add one so it will start at one and go up to 4.
-            int number_of_card = r.Next(0, 12) + 1; // determind the card number. Ace is one. Add one so the starting value is one.
+            int type_of_card; // deterimin what card type.
+            int number_of_card; // determind the card number. Ace is one.
 
             for (int i = 0; i < Cards_in_deck; i++)
             {
+                type_of_card = r.Next(0, 3) + 1; //Add one so it will start at one and go up to 4.
+                number_of_card = r.Next(0, 12) + 1; //Add one so it will start at one and go up to 4.
                 Console.ReadLine();
                 if (card[type_of_card, number_of_card] == 0)
                 {
