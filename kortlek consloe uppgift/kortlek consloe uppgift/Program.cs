@@ -26,16 +26,13 @@ namespace kortlek_consloe_uppgift
             string number = string.Empty;
 
 
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 3; i++)
             {
-                for (int j = 0; j < 13; j++)
+                for (int j = 0; j < 12; j++)
                 {
-                   card[i, j] = 0; //0 means not drawn. 1 means drawn.
+                   card[i + 1, j + 1] = 0; //0 means not drawn. 1 means drawn.
                 }
             }
-
-            Console.WriteLine("Tryck enter för att dra ett kort");
-            Console.ReadLine();
             Random r = new Random();
             int type_of_card; // deterimin what card type.
             int number_of_card; // determind the card number. Ace is one.
@@ -46,7 +43,7 @@ namespace kortlek_consloe_uppgift
                 number_of_card = r.Next(0, 12) + 1; //Add one so it will start at one and go up to 4.
                 if (card[type_of_card, number_of_card] == 0)
                 {
-                    Console.WriteLine("Tryck enter för ett nyt kort");
+                    Console.WriteLine("Tryck enter för ett kort");
                     Console.ReadLine();
                     switch (type_of_card)
                     {
@@ -139,7 +136,7 @@ namespace kortlek_consloe_uppgift
                                 break;
                             }
                     }
-                    Console.WriteLine(type + " " + number);
+                    Console.WriteLine("Ditt kort är: " + type + " " + number);
                     card[type_of_card, number_of_card] = 1;
 
                 }
@@ -148,6 +145,8 @@ namespace kortlek_consloe_uppgift
                     i--;
                 }
             }
+
+            Console.WriteLine("Du är klar");
         }
     }
 }
