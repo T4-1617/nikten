@@ -30,7 +30,7 @@ namespace kortlek_consloe_uppgift
             {
                 for (int j = 0; j < 12; j++)
                 {
-                   card[i + 1, j + 1] = 0; //0 means not drawn. 1 means drawn.
+                    card[i + 1, j + 1] = 0; //0 means not drawn. 1 means drawn.
                 }
             }
             Random r = new Random();
@@ -39,8 +39,8 @@ namespace kortlek_consloe_uppgift
 
             for (int i = 0; i < Cards_in_deck; i++)
             {
-                type_of_card = r.Next(0, 3) + 1; //Add one so it will start at one and go up to 4.
-                number_of_card = r.Next(0, 12) + 1; //Add one so it will start at one and go up to 4.
+                type_of_card = r.Next(0, 4); //Add one so it will start at one and go up to 4.
+                number_of_card = r.Next(0, 13); //Add one so it will start at one and go up to 4.
                 if (card[type_of_card, number_of_card] == 0)
                 {
                     Console.WriteLine("Tryck enter för ett kort");
@@ -147,6 +147,7 @@ namespace kortlek_consloe_uppgift
             }
 
             Console.WriteLine("Du är klar");
+            Console.ReadLine();
         }
     }
 }
