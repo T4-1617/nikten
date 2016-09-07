@@ -24,28 +24,26 @@ namespace blackjack
             int Score = 0;
 
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 4; i++)
             {
-                for (int j = 0; j < 12; j++)
+                for (int j = 0; j < 13; j++)
                 {
-                    deck[i + 1, j + 1] = 0; //0 means not drawn. 1 means drawn one time.  2 means drawn two times.
+                    deck[i, j] = 0; //0 means not drawn. 1 means drawn one time.  2 means drawn two times and will not be drwan again.
                 }
             }
-            Console.WriteLine("Dra ett kort? (J/N)");
-            string awnser = Console.ReadLine();
             while (Game_is_running)
             {
                 if (Score < 21)
                 {
-                    Console.WriteLine("Dra ett till kort? (J/N)");
-                    awnser = Console.ReadLine();
+                    Console.WriteLine("Dra ett kort? (J/N)");
+                    string awnser = Console.ReadLine();
 
-                    if (awnser == "j")
+                    if (awnser == "j" && 0 < number_of_cards_in_deck)
                     {
-                        type_of_card = r.Next(0, 4);
-                        number_of_card = r.Next(0, 13);
-                        for (int i = 0; i < 1;)
+                        for (int i = 0; i < 1; i++)
                         {
+                            type_of_card = r.Next(0, 4);
+                            number_of_card = r.Next(0, 13);
                             if (deck[type_of_card, number_of_card] == 0 || deck[type_of_card, number_of_card] == 1)
                             {
                                 deck[type_of_card, number_of_card] = deck[type_of_card, number_of_card] + 1;
@@ -153,28 +151,39 @@ namespace blackjack
                                             break;
                                         }
                                 }
-                                i++;
+                               
 
                                 Console.WriteLine("Du drog: " + type + " " + number);
-                                Console.WriteLine("Ditt poäng är:" + Score + " och du ska försöka få 21");
+                                Console.WriteLine("Ditt poäng är: " + Score + " och du ska försöka få 21");
+                                number_of_cards_in_deck--;
+                            }
+                            else
+                            {
+                                i--;
                             }
                         }
                     }
                     else
                     {
-                        Console.WriteLine("Vill du slpela igen? (J/N)");
-                        Play_again = Console.ReadLine();
-                        if (Play_again == "j")
+                        if (number_of_cards_in_deck == 0)
                         {
-                            for (int i = 0; i < 3; i++)
+                            Console.WriteLine("Du fick slut på kort");
+                            Console.ReadLine();
+                            Game_is_running = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Vill du slpela igen? (J/N)");
+                            Play_again = Console.ReadLine();
+                            if (Play_again == "j")
                             {
-                                for (int j = 0; j < 12; j++)
-                                {
-                                    deck[i + 1, j + 1] = 0;
-                                }
+                                Score = 0;
+                            }
+                            else
+                            {
+                                Game_is_running = false;
                             }
                         }
-                        Score = 0;
                     }
                 }
 
@@ -185,15 +194,12 @@ namespace blackjack
                     Play_again = Console.ReadLine();
                     if (Play_again == "j")
                     {
-                        for (int i = 0; i < 3; i++)
-                        {
-                            for (int j = 0; j < 12; j++)
-                            {
-                                deck[i + 1, j + 1] = 0;
-                            }
-                        }
+                        Score = 0;
                     }
-                    Score = 0;
+                    else
+                    {
+                        Game_is_running = false;
+                    }
                 }
                 else
                 {
@@ -203,15 +209,12 @@ namespace blackjack
                     Play_again = Console.ReadLine();
                     if (Play_again == "j")
                     {
-                        for (int i = 0; i < 3; i++)
-                        {
-                            for (int j = 0; j < 12; j++)
-                            {
-                                deck[i + 1, j + 1] = 0;
-                            }
-                        }
+                        Score = 0;
                     }
-                    Score = 0;
+                    else
+                    {
+                        Game_is_running = false;
+                    }
                 }
             }
         }
