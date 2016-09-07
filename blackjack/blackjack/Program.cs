@@ -75,7 +75,16 @@ namespace blackjack
                                     case 0:
                                         {
                                             number = "ess";
-                                            Score = Score + 1;
+                                            if (Score + 11 == 21 || Score + 11 < 15) //if 1 can be either 1 or 11 points the program will calculate if good. either by the score becomeing 21 or less than 15.
+                                            {
+                                                Console.WriteLine("du fick ett ess! Programet valde att du fick 11 poäng.");
+                                                Score = Score + 11;
+                                            }
+                                            else
+                                            {
+                                                Console.WriteLine("du fick ett ess! Programet valde att du fick 1 poäng.");
+                                                Score = Score + 1;
+                                            }
                                             break;
                                         }
                                     case 1:
@@ -135,19 +144,19 @@ namespace blackjack
                                     case 10:
                                         {
                                             number = "knäckt";
-                                            Score = Score + 11;
+                                            Score = Score + 10;
                                             break;
                                         }
                                     case 11:
                                         {
                                             number = "droting";
-                                            Score = Score + 12;
+                                            Score = Score + 10;
                                             break;
                                         }
                                     case 12:
                                         {
                                             number = "kung";
-                                            Score = Score + 13;
+                                            Score = Score + 10;
                                             break;
                                         }
                                 }
@@ -204,7 +213,7 @@ namespace blackjack
                 else
                 {
                     Console.WriteLine("Ditt poäng gick över 21");
-                    Console.WriteLine("Du fölora");
+                    Console.WriteLine("Du du sprack");
                     Console.WriteLine("Vill du slpela igen? (J/N)");
                     Play_again = Console.ReadLine();
                     if (Play_again == "j")
