@@ -162,15 +162,56 @@ namespace blackjack
                     }
                     else
                     {
+                        Console.WriteLine("Vill du slpela igen? (J/N)");
+                        Play_again = Console.ReadLine();
+                        if (Play_again == "j")
+                        {
+                            for (int i = 0; i < 3; i++)
+                            {
+                                for (int j = 0; j < 12; j++)
+                                {
+                                    deck[i + 1, j + 1] = 0;
+                                }
+                            }
+                        }
+                        Score = 0;
                     }
                 }
+
                 else if (Score == 21)
                 {
                     Console.WriteLine("Du vann!");
+                    Console.WriteLine("Vill du slpela igen? (J/N)");
+                    Play_again = Console.ReadLine();
+                    if (Play_again == "j")
+                    {
+                        for (int i = 0; i < 3; i++)
+                        {
+                            for (int j = 0; j < 12; j++)
+                            {
+                                deck[i + 1, j + 1] = 0;
+                            }
+                        }
+                    }
+                    Score = 0;
                 }
                 else
                 {
-                    Console.WriteLine("Du förlora.");
+                    Console.WriteLine("Ditt poäng gick över 21");
+                    Console.WriteLine("Du fölora");
+                    Console.WriteLine("Vill du slpela igen? (J/N)");
+                    Play_again = Console.ReadLine();
+                    if (Play_again == "j")
+                    {
+                        for (int i = 0; i < 3; i++)
+                        {
+                            for (int j = 0; j < 12; j++)
+                            {
+                                deck[i + 1, j + 1] = 0;
+                            }
+                        }
+                    }
+                    Score = 0;
                 }
             }
         }
