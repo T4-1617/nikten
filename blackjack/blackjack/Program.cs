@@ -23,6 +23,7 @@ namespace blackjack
             int type_of_card = 0;
             int number_of_card = 0;
             Random r = new Random();
+            Boolean First_turn = true;
 
             string type = string.Empty;
             string number = string.Empty;
@@ -47,7 +48,12 @@ namespace blackjack
                         Computer_turn();
                     }
                     else
-                    {
+                    { 
+                        if (First_turn)
+                        {
+                            Computer_turn();
+                            First_turn = false;
+                        }
                         Console.WriteLine("Dra ett kort? (J/N)");
                         awnser = Console.ReadLine();
 
@@ -225,6 +231,7 @@ namespace blackjack
                         awnser = string.Empty;
                         Compute_Score = 0;
                         Player_Score = 0;
+                        First_turn = true;
                     }
                     else
                     {
@@ -244,6 +251,7 @@ namespace blackjack
                         awnser = string.Empty;
                         Compute_Score = 0;
                         Player_Score = 0;
+                        First_turn = true;
                     }
                     else
                     {
@@ -265,6 +273,7 @@ namespace blackjack
                             awnser = string.Empty;
                             Compute_Score = 0;
                             Player_Score = 0;
+                            First_turn = true;
                         }
                         else
                         {
@@ -283,6 +292,7 @@ namespace blackjack
                             awnser = string.Empty;
                             Compute_Score = 0;
                             Player_Score = 0;
+                            First_turn = true;
                         }
                         else
                         {
@@ -454,6 +464,7 @@ namespace blackjack
                         awnser = string.Empty;
                         Compute_Score = 0;
                         Player_Score = 0;
+                        First_turn = true;
                     }
                     else
                     {
