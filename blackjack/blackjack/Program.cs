@@ -12,7 +12,6 @@ namespace blackjack
 
         static int Compute_Score = 0;
         static int Player_Score = 0;
-        static int Computer_total_score = 0;
         static int Player_total_score = 0;
         static string awnser = string.Empty;
         static Boolean Game_is_running = true;
@@ -42,6 +41,7 @@ namespace blackjack
             {
                 if (Player_Score < 21 && Compute_Score < 21)
                 {
+
                     if (awnser == "n")
                     {
                         Computer_turn();
@@ -51,7 +51,7 @@ namespace blackjack
                         Console.WriteLine("Dra ett kort? (J/N)");
                         awnser = Console.ReadLine();
 
-                        if (awnser == "j" && 0 < number_of_cards_in_deck)
+                        if (awnser == "j" && 15 < number_of_cards_in_deck)
                         {
                             for (int i = 0; i < 1; i++)
                             {
@@ -178,6 +178,7 @@ namespace blackjack
                                     Console.WriteLine("--------------------");
                                     Console.WriteLine("Du drog: " + type + " " + number);
                                     Console.WriteLine("Ditt poäng är: " + Player_Score + " och du ska försöka få 21");
+                                    Console.WriteLine("Ditt totala poäng är: " + Player_total_score);
                                     Console.WriteLine("--------------------");
                                     number_of_cards_in_deck--;
                                 }
@@ -189,42 +190,24 @@ namespace blackjack
                         }
                         else
                         {
-                            if (Compute_Score < Player_Score)
+                            if (number_of_cards_in_deck < 15)
                             {
-
+                                Console.WriteLine("!!!!!!!!!!!!!!!!!!!!!");
+                                Console.WriteLine("Det är snart slut på kort. vi blandar om nu");
+                                Console.WriteLine("Tryck på enter för att återgå till spelet");
+                                for (int i = 0; i < 4; i++)
+                                {
+                                    for (int j = 0; j < 13; j++)
+                                    {
+                                        deck[i, j] = 0;
+                                    }
+                                }
+                                Console.WriteLine("!!!!!!!!!!!!!!!!!!!!!");
+                                Console.ReadLine();
                             }
                             else
                             {
-                                if (number_of_cards_in_deck < 15)
-                                {
-                                    Console.WriteLine("!!!!!!!!!!!!!!!!!!!!!");
-                                    Console.WriteLine("Det är snart slut på kort. vi blandar om nu");
-                                    Console.WriteLine("Tryck på enter för att återgå till spelet");
-                                    for (int i = 0; i < 4; i++)
-                                    {
-                                        for (int j = 0; j < 13; j++)
-                                        {
-                                            deck[i, j] = 0;
-                                        }
-                                    }
-                                    Console.WriteLine("!!!!!!!!!!!!!!!!!!!!!");
-                                    Console.ReadLine();
-                                }
-                                else
-                                {
-                                    Console.WriteLine("Vill du slpela igen? (J/N)");
-                                    Play_again = Console.ReadLine();
-                                    if (Play_again == "j")
-                                    {
-                                        awnser = string.Empty;
-                                        Compute_Score = 0;
-                                        Player_Score = 0;
-                                    }
-                                    else
-                                    {
-                                        Game_is_running = false;
-                                    }
-                                }
+                                Computer_turn();
                             }
                         }
                     }
@@ -232,7 +215,9 @@ namespace blackjack
 
                 else if (Player_Score == 21)
                 {
+                    Player_total_score = Player_total_score + 3;
                     Console.WriteLine("Du vann!");
+                    Console.WriteLine("Ditt totala poäng är: " + Player_total_score);
                     Console.WriteLine("Vill du slpela igen? (J/N)");
                     Play_again = Console.ReadLine();
                     if (Play_again == "j")
@@ -248,8 +233,11 @@ namespace blackjack
                 }
                 else if (Compute_Score == 21)
                 {
+                    Player_total_score--;
                     Console.WriteLine("Datorn Vann!");
+                    Console.WriteLine("Din totala poäng är: " + Player_total_score);
                     Console.WriteLine("Vill du slpela igen? (J/N)");
+
                     Play_again = Console.ReadLine();
                     if (Play_again == "j")
                     {
@@ -266,8 +254,10 @@ namespace blackjack
                 {
                     if (Player_Score > 21)
                     {
+                        Player_total_score--;
                         Console.WriteLine("Ditt poäng gick över 21");
                         Console.WriteLine("Du du sprack");
+                        Console.WriteLine("Ditt totala poäng är: " + Player_total_score);
                         Console.WriteLine("Vill du slpela igen? (J/N)");
                         Play_again = Console.ReadLine();
                         if (Play_again == "j")
@@ -283,7 +273,9 @@ namespace blackjack
                     }
                     else
                     {
+                        Player_total_score++;
                         Console.WriteLine("Datorns poäng gick över 21");
+                        Console.WriteLine("Ditt totala poäng är: " + Player_total_score);
                         Console.WriteLine("Vill du slpela igen? (J/N)");
                         Play_again = Console.ReadLine();
                         if (Play_again == "j")
@@ -297,6 +289,7 @@ namespace blackjack
                             Game_is_running = false;
                         }
                     }
+
                 }
             }
         }
@@ -451,7 +444,9 @@ namespace blackjack
                 }
                 else
                 {
+                    Player_total_score--;
                     Console.WriteLine("Datorn Vann!");
+                    Console.WriteLine("Ditt totala poäng är: " + Player_total_score);
                     Console.WriteLine("Vill du slpela igen? (J/N)");
                     string Play_again = Console.ReadLine();
                     if (Play_again == "j")
