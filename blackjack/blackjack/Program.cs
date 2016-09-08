@@ -15,6 +15,7 @@ namespace blackjack
         static int Player_total_score = 0;
         static string awnser = string.Empty;
         static Boolean Game_is_running = true;
+        static Boolean First_turn = true;
 
 
         static void Main(string[] args)
@@ -23,7 +24,6 @@ namespace blackjack
             int type_of_card = 0;
             int number_of_card = 0;
             Random r = new Random();
-            Boolean First_turn = true;
 
             string type = string.Empty;
             string number = string.Empty;
