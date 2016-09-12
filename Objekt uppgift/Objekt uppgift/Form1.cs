@@ -13,6 +13,7 @@ namespace Objekt_uppgift
     public partial class Form1 : Form
     {
         System.Collections.ArrayList MyCostemer = new System.Collections.ArrayList();
+        public int Costermer_number = 0;
 
         public Form1()
         {
@@ -20,15 +21,18 @@ namespace Objekt_uppgift
         }
 
         private void tbxAdd_Click(object sender, EventArgs e)
-        {
+        { 
+            Costermer_number++;
             Costumer c = new Costumer();
             c.Firstname = tbxfirstname.Text;
             c.Lastname = tbxLastname.Text;
 
+            listBox1.Items.Add(c.Fullname());
+
             Random r = new Random();
             int Random_ID = r.Next(100 , 201);
-            
 
+            lblResult.Text = "Du har " + Costermer_number + " kunder";
         }
 
         public class Costumer
