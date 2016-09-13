@@ -48,7 +48,7 @@ namespace Objekt_uppgift
             c.Firstname = tbxfirstname.Text;
             c.Lastname = tbxLastname.Text;
             c.idnumer = Random_ID;
-            c.Archive = true;
+            c.Archive = cbxIsActiv.Checked;
 
             MyCostemer.Add(c);
 

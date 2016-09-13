@@ -35,6 +35,7 @@
             this.tbxfirstname = new System.Windows.Forms.TextBox();
             this.tbxLastname = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.cbxIsActiv = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // tbxAdd
@@ -97,11 +98,22 @@
             this.listBox1.TabIndex = 6;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
+            // cbxIsActiv
+            // 
+            this.cbxIsActiv.AutoSize = true;
+            this.cbxIsActiv.Location = new System.Drawing.Point(76, 74);
+            this.cbxIsActiv.Name = "cbxIsActiv";
+            this.cbxIsActiv.Size = new System.Drawing.Size(89, 17);
+            this.cbxIsActiv.TabIndex = 7;
+            this.cbxIsActiv.Text = "Kund är aktiv";
+            this.cbxIsActiv.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.cbxIsActiv);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.tbxLastname);
             this.Controls.Add(this.tbxfirstname);
@@ -125,6 +137,7 @@
         private System.Windows.Forms.TextBox tbxfirstname;
         private System.Windows.Forms.TextBox tbxLastname;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.CheckBox cbxIsActiv;
     }
 }
 
