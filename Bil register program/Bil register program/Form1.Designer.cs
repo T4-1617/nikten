@@ -52,6 +52,7 @@
             this.btnEdit.TabIndex = 0;
             this.btnEdit.Text = "Editera";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // List_of_cars
             // 
@@ -60,6 +61,7 @@
             this.List_of_cars.Name = "List_of_cars";
             this.List_of_cars.Size = new System.Drawing.Size(150, 238);
             this.List_of_cars.TabIndex = 1;
+            this.List_of_cars.SelectedIndexChanged += new System.EventHandler(this.List_of_cars_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -93,6 +95,7 @@
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Spara";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -103,6 +106,7 @@
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label2
             // 
