@@ -100,7 +100,7 @@
             // LbxEmploee
             // 
             this.LbxEmploee.FormattingEnabled = true;
-            this.LbxEmploee.Location = new System.Drawing.Point(35, 270);
+            this.LbxEmploee.Location = new System.Drawing.Point(31, 270);
             this.LbxEmploee.Name = "LbxEmploee";
             this.LbxEmploee.Size = new System.Drawing.Size(291, 95);
             this.LbxEmploee.TabIndex = 6;

@@ -26,15 +26,22 @@ namespace Costermer_and_emploers
             string Firstname = tbxfirstName.Text;
             string LastName = tbxLastName.Text;
 
-            CostemerAndEmployee.Add(new Costemer() { CostemerFirstname = tbxLastName.Text, CostemerLastname = tbxfirstName.Text });
-            
+            if (RbtCostemer.Checked)
+            {
+                CostemerAndEmployee.Add(new Costemer() { CostemerFirstname = tbxLastName.Text, CostemerLastname = tbxfirstName.Text });
+            }
+            else
+            {
+                CostemerAndEmployee.Add(new Employee() { EmployeeFirstname = tbxLastName.Text, Employeelastname = tbxfirstName.Text });
+            }
+
+            AddCostemersAndEmployee();
         }
 
         public void AddCostemersAndEmployee()
         {
             foreach (var xxx in CostemerAndEmployee)
             {
-
                 switch (xxx.GetType().Name)
                 {
                     case "Costemer":
