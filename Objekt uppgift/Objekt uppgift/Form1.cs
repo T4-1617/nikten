@@ -61,7 +61,7 @@ namespace Objekt_uppgift
             int index = listBox1.SelectedIndex;
             Costumer a = new Costumer();
             a = (Costumer)MyCostemer[index];
-            MessageBox.Show(String.Format("{0}, {1}, {2}", a.Fullname(), a.idnumer, a.Archive));
+            MessageBox.Show(string.Format("{0}, {1}, {2}", a.Fullname(), a.idnumer, a.Archive));
         }
     }
 }

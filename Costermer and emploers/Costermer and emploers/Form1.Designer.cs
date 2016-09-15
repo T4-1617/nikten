@@ -38,8 +38,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.RbtCostemer = new System.Windows.Forms.RadioButton();
             this.RbnEmployee = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbxfirstName = new System.Windows.Forms.TextBox();
+            this.tbxLastName = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +51,7 @@
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "lägg till";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label1
             // 
@@ -116,6 +117,7 @@
             // RbtCostemer
             // 
             this.RbtCostemer.AutoSize = true;
+            this.RbtCostemer.Checked = true;
             this.RbtCostemer.Location = new System.Drawing.Point(4, 4);
             this.RbtCostemer.Name = "RbtCostemer";
             this.RbtCostemer.Size = new System.Drawing.Size(50, 17);
@@ -135,27 +137,27 @@
             this.RbnEmployee.Text = "Anstäld";
             this.RbnEmployee.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // tbxfirstName
             // 
-            this.textBox1.Location = new System.Drawing.Point(102, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 8;
+            this.tbxfirstName.Location = new System.Drawing.Point(102, 13);
+            this.tbxfirstName.Name = "tbxfirstName";
+            this.tbxfirstName.Size = new System.Drawing.Size(100, 20);
+            this.tbxfirstName.TabIndex = 8;
             // 
-            // textBox2
+            // tbxLastName
             // 
-            this.textBox2.Location = new System.Drawing.Point(102, 46);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 9;
+            this.tbxLastName.Location = new System.Drawing.Point(102, 46);
+            this.tbxLastName.Name = "tbxLastName";
+            this.tbxLastName.Size = new System.Drawing.Size(100, 20);
+            this.tbxLastName.TabIndex = 9;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(360, 377);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbxLastName);
+            this.Controls.Add(this.tbxfirstName);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.LbxEmploee);
             this.Controls.Add(this.LbxCostemer);
@@ -185,8 +187,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton RbnEmployee;
         private System.Windows.Forms.RadioButton RbtCostemer;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbxfirstName;
+        private System.Windows.Forms.TextBox tbxLastName;
     }
 }
 

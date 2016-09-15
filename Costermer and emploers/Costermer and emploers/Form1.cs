@@ -12,9 +12,45 @@ namespace Costermer_and_emploers
 {
     public partial class Form1 : Form
     {
+        System.Collections.ArrayList CostemerAndEmployee = new System.Collections.ArrayList();
         public Form1()
         {
             InitializeComponent();
+
+            
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+            string Firstname = tbxfirstName.Text;
+            string LastName = tbxLastName.Text;
+
+            CostemerAndEmployee.Add(new Costemer() { CostemerFirstname = tbxLastName.Text, CostemerLastname = tbxfirstName.Text });
+            
+        }
+
+        public void AddCostemersAndEmployee()
+        {
+            foreach (var xxx in CostemerAndEmployee)
+            {
+
+                switch (xxx.GetType().Name)
+                {
+                    case "Costemer":
+                        LbxCostemer.Items.Add("Customer:" + xxx);
+
+                        break;
+
+                    case "Employee":
+                        LbxEmploee.Items.Add("Employee:" + xxx);
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+
         }
     }
 }
