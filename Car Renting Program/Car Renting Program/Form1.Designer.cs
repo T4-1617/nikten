@@ -61,6 +61,7 @@
             this.btnAvailibleCars.TabIndex = 0;
             this.btnAvailibleCars.Text = "Lediga Bilar";
             this.btnAvailibleCars.UseVisualStyleBackColor = true;
+            this.btnAvailibleCars.Click += new System.EventHandler(this.btnAvailibleCars_Click);
             // 
             // btnOpenAddCar
             // 
@@ -70,6 +71,7 @@
             this.btnOpenAddCar.TabIndex = 1;
             this.btnOpenAddCar.Text = "Lägg till en bil";
             this.btnOpenAddCar.UseVisualStyleBackColor = true;
+            this.btnOpenAddCar.Click += new System.EventHandler(this.btnOpenAddCar_Click);
             // 
             // btnRentedCars
             // 
@@ -79,6 +81,7 @@
             this.btnRentedCars.TabIndex = 2;
             this.btnRentedCars.Text = "Hyrda Bilar";
             this.btnRentedCars.UseVisualStyleBackColor = true;
+            this.btnRentedCars.Click += new System.EventHandler(this.btnRentedCars_Click);
             // 
             // pnlRentCar
             // 
@@ -139,6 +142,7 @@
             this.btnRentCar.TabIndex = 0;
             this.btnRentCar.Text = "Hyr bil";
             this.btnRentCar.UseVisualStyleBackColor = true;
+            this.btnRentCar.Click += new System.EventHandler(this.btnRentCar_Click);
             // 
             // btnReturnCar
             // 
@@ -148,6 +152,7 @@
             this.btnReturnCar.TabIndex = 0;
             this.btnReturnCar.Text = "Återlämna bil";
             this.btnReturnCar.UseVisualStyleBackColor = true;
+            this.btnReturnCar.Click += new System.EventHandler(this.btnReturnCar_Click);
             // 
             // btnAddCar
             // 
@@ -157,6 +162,7 @@
             this.btnAddCar.TabIndex = 0;
             this.btnAddCar.Text = "Lägg till bil";
             this.btnAddCar.UseVisualStyleBackColor = true;
+            this.btnAddCar.Click += new System.EventHandler(this.btnAddCar_Click);
             // 
             // lstRentedCars
             // 

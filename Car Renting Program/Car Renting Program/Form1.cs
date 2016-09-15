@@ -16,5 +16,35 @@ namespace Car_Renting_Program
         {
             InitializeComponent();
         }
+
+        private void btnAvailibleCars_Click(object sender, EventArgs e)
+        {
+            pnlRentCar.Visible = true;
+        }
+
+        private void btnOpenAddCar_Click(object sender, EventArgs e)
+        {
+            pnlAddCar.Visible = true;
+        }
+
+        private void btnRentedCars_Click(object sender, EventArgs e)
+        {
+            pnlRentedCars.Visible = true;
+        }
+
+        private void btnRentCar_Click(object sender, EventArgs e)
+        {
+            pnlRentCar.Visible = false;
+        }
+
+        private void btnReturnCar_Click(object sender, EventArgs e)
+        {
+            pnlRentedCars.Visible = false;
+        }
+
+        private void btnAddCar_Click(object sender, EventArgs e)
+        {
+            pnlAddCar.Visible = false;
+        }
     }
 }
