@@ -11,6 +11,7 @@ namespace Car_Renting_Program
         public string Maker { get; set; }
         public string RegristerNumber { get; set; }
         public string Color { get; set; }
+        public string Modle { get; set; }
         public Boolean Rented { get; set; }
 
         public string CarName()

@@ -19,9 +19,9 @@ namespace Car_Renting_Program
             InitializeComponent();
             Car = new System.Collections.ArrayList();
 
-            Car.Add(new Cars() { Maker = "Tyota", Color = "Röd", RegristerNumber = "AGD 582", Rented = false});
-            Car.Add(new Cars() { Maker = "Ople", Color = "Blå", RegristerNumber = "GSF 153", Rented = false });
-            Car.Add(new Cars() { Maker = "Volvo", Color = "Svart", RegristerNumber = "KFV 264", Rented = false });
+            Car.Add(new Cars() { Maker = "Tyota", Color = "Röd", RegristerNumber = "AGD 582", Rented = false, Modle = "V38"});
+            Car.Add(new Cars() { Maker = "Ople", Color = "Blå", RegristerNumber = "GSF 153", Rented = false, Modle = "Winter55" });
+            Car.Add(new Cars() { Maker = "Volvo", Color = "Svart", RegristerNumber = "KFV 264", Rented = false, Modle = "JH73"});
         }
 
         private void btnAvailibleCars_Click(object sender, EventArgs e)
@@ -54,6 +54,12 @@ namespace Car_Renting_Program
 
         private void btnAddCar_Click(object sender, EventArgs e)
         {
+            Car.Add(new Cars() { Maker = tbxMaker.Text, Color = tbxColor.Text, RegristerNumber = tbxRegrristerNumber.Text, Rented = false, Modle = tbxModel.Text});
+            tbxMaker.Clear();
+            tbxColor.Clear();
+            tbxModel.Clear();
+            tbxRegrristerNumber.Clear();
+            GUI();
         }
 
 
@@ -71,7 +77,7 @@ namespace Car_Renting_Program
         public void PrintCars()
         {
             lstAvalibleCars.Items.Clear();
-            foreach (RentedCars x in Car)
+            foreach (Cars x in Car)
             {
                 switch (x.Rented)
                 {

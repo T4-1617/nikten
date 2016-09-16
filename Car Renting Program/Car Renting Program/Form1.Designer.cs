@@ -48,6 +48,8 @@
             this.pnlThankYouRent = new System.Windows.Forms.Panel();
             this.pnlThankYouRented = new System.Windows.Forms.Panel();
             this.lblNumberOfCarsOpen = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbxRegrristerNumber = new System.Windows.Forms.TextBox();
             this.pnlRentCar.SuspendLayout();
             this.pnlRentedCars.SuspendLayout();
             this.pnlAddCar.SuspendLayout();
@@ -141,6 +143,8 @@
             // 
             // pnlAddCar
             // 
+            this.pnlAddCar.Controls.Add(this.tbxRegrristerNumber);
+            this.pnlAddCar.Controls.Add(this.label4);
             this.pnlAddCar.Controls.Add(this.tbxColor);
             this.pnlAddCar.Controls.Add(this.tbxMaker);
             this.pnlAddCar.Controls.Add(this.tbxModel);
@@ -150,27 +154,27 @@
             this.pnlAddCar.Controls.Add(this.btnAddCar);
             this.pnlAddCar.Location = new System.Drawing.Point(13, 447);
             this.pnlAddCar.Name = "pnlAddCar";
-            this.pnlAddCar.Size = new System.Drawing.Size(283, 102);
+            this.pnlAddCar.Size = new System.Drawing.Size(313, 144);
             this.pnlAddCar.TabIndex = 5;
             this.pnlAddCar.Visible = false;
             // 
             // tbxColor
             // 
-            this.tbxColor.Location = new System.Drawing.Point(71, 72);
+            this.tbxColor.Location = new System.Drawing.Point(120, 71);
             this.tbxColor.Name = "tbxColor";
             this.tbxColor.Size = new System.Drawing.Size(100, 20);
             this.tbxColor.TabIndex = 6;
             // 
             // tbxMaker
             // 
-            this.tbxMaker.Location = new System.Drawing.Point(71, 46);
+            this.tbxMaker.Location = new System.Drawing.Point(120, 44);
             this.tbxMaker.Name = "tbxMaker";
             this.tbxMaker.Size = new System.Drawing.Size(100, 20);
             this.tbxMaker.TabIndex = 5;
             // 
             // tbxModel
             // 
-            this.tbxModel.Location = new System.Drawing.Point(71, 17);
+            this.tbxModel.Location = new System.Drawing.Point(120, 17);
             this.tbxModel.Name = "tbxModel";
             this.tbxModel.Size = new System.Drawing.Size(100, 20);
             this.tbxModel.TabIndex = 4;
@@ -178,7 +182,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 75);
+            this.label3.Location = new System.Drawing.Point(7, 74);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(28, 13);
             this.label3.TabIndex = 3;
@@ -204,9 +208,9 @@
             // 
             // btnAddCar
             // 
-            this.btnAddCar.Location = new System.Drawing.Point(205, 69);
+            this.btnAddCar.Location = new System.Drawing.Point(226, 47);
             this.btnAddCar.Name = "btnAddCar";
-            this.btnAddCar.Size = new System.Drawing.Size(75, 23);
+            this.btnAddCar.Size = new System.Drawing.Size(75, 40);
             this.btnAddCar.TabIndex = 0;
             this.btnAddCar.Text = "Lägg till bil";
             this.btnAddCar.UseVisualStyleBackColor = true;
@@ -236,6 +240,23 @@
             this.lblNumberOfCarsOpen.Size = new System.Drawing.Size(111, 13);
             this.lblNumberOfCarsOpen.TabIndex = 8;
             this.lblNumberOfCarsOpen.Text = "Det finns 3 lediga bilar";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label4.Location = new System.Drawing.Point(7, 102);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Regristerings numer:";
+            // 
+            // tbxRegrristerNumber
+            // 
+            this.tbxRegrristerNumber.Location = new System.Drawing.Point(120, 99);
+            this.tbxRegrristerNumber.Name = "tbxRegrristerNumber";
+            this.tbxRegrristerNumber.Size = new System.Drawing.Size(100, 20);
+            this.tbxRegrristerNumber.TabIndex = 8;
             // 
             // Form1
             // 
@@ -284,6 +305,8 @@
         private System.Windows.Forms.Panel pnlThankYouRent;
         private System.Windows.Forms.Panel pnlThankYouRented;
         private System.Windows.Forms.Label lblNumberOfCarsOpen;
+        private System.Windows.Forms.TextBox tbxRegrristerNumber;
+        private System.Windows.Forms.Label label4;
     }
 }
 
