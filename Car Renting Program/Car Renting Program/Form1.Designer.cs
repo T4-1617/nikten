@@ -102,9 +102,11 @@
             this.lstAvalibleCars.Name = "lstAvalibleCars";
             this.lstAvalibleCars.Size = new System.Drawing.Size(195, 134);
             this.lstAvalibleCars.TabIndex = 1;
+            this.lstAvalibleCars.SelectedIndexChanged += new System.EventHandler(this.lstAvalibleCars_SelectedIndexChanged);
             // 
             // btnRentCar
             // 
+            this.btnRentCar.Enabled = false;
             this.btnRentCar.Location = new System.Drawing.Point(205, 115);
             this.btnRentCar.Name = "btnRentCar";
             this.btnRentCar.Size = new System.Drawing.Size(75, 23);
@@ -133,6 +135,7 @@
             // 
             // btnReturnCar
             // 
+            this.btnReturnCar.Enabled = false;
             this.btnReturnCar.Location = new System.Drawing.Point(205, 114);
             this.btnReturnCar.Name = "btnReturnCar";
             this.btnReturnCar.Size = new System.Drawing.Size(75, 23);

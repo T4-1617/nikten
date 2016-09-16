@@ -46,6 +46,11 @@ namespace Car_Renting_Program
 
         private void btnRentCar_Click(object sender, EventArgs e)
         {
+            int index = lstAvalibleCars.SelectedIndex;
+            Cars a = (Cars)Car[index];
+            a.Rented = true;
+            lstAvalibleCars.SelectedItem = null;
+            PrintCars();
         }
 
         private void btnReturnCar_Click(object sender, EventArgs e)
@@ -93,6 +98,11 @@ namespace Car_Renting_Program
                         break;
                 }
             }
+        }
+
+        private void lstAvalibleCars_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnRentCar.Enabled = true;
         }
     }
 }
