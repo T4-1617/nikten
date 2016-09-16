@@ -23,7 +23,7 @@ namespace Car_Renting_Program
             Cars = new System.Collections.ArrayList();
 
             Cars.Add(new Car() { Maker = "Tyota", Color = "Röd", RegristerNumber = "AGD 582", Rented = false, Modle = "V38"});
-            Cars.Add(new Car() { Maker = "Ople", Color = "Blå", RegristerNumber = "GSF 153", Rented = false, Modle = "Winter55"});
+            Cars.Add(new Car() { Maker = "Opel", Color = "Blå", RegristerNumber = "GSF 153", Rented = false, Modle = "Winter55"});
             Cars.Add(new Car() { Maker = "Volvo", Color = "Svart", RegristerNumber = "KFV 264", Rented = false, Modle = "JH73"});
         }
 
@@ -118,11 +118,15 @@ namespace Car_Renting_Program
 
         private void lstAvalibleCars_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Car a = (Car)lstAvalibleCars.SelectedItem;
+            MessageBox.Show(" Model: " + a.Modle + "\r Skapare: " + a.Maker + "\r Färg: " + a.Color + "\r Regristerings numer: " + a.RegristerNumber);
             btnRentCar.Enabled = true;
         }
 
         private void lstRentedCars_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Car b = (Car)lstRentedCars.SelectedItem;
+            MessageBox.Show(" Model: " + b.Modle + "\r Skapare: " + b.Maker + "\r Färg: " + b.Color + "\r Regristerings numer: " + b.RegristerNumber);
             btnReturnCar.Enabled = true;
         }
     }

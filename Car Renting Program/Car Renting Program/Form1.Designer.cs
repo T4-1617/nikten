@@ -48,10 +48,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnAddCar = new System.Windows.Forms.Button();
             this.pnlThankYouReturn = new System.Windows.Forms.Panel();
-            this.pnlThankYouRented = new System.Windows.Forms.Panel();
-            this.lblNumberOfCarsOpen = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.pnlThankYouRented = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.lblNumberOfCarsOpen = new System.Windows.Forms.Label();
             this.pnlRentCar.SuspendLayout();
             this.pnlRentedCars.SuspendLayout();
             this.pnlAddCar.SuspendLayout();
@@ -123,7 +123,7 @@
             // 
             this.pnlRentedCars.Controls.Add(this.lstRentedCars);
             this.pnlRentedCars.Controls.Add(this.btnReturnCar);
-            this.pnlRentedCars.Location = new System.Drawing.Point(13, 258);
+            this.pnlRentedCars.Location = new System.Drawing.Point(10, 93);
             this.pnlRentedCars.Name = "pnlRentedCars";
             this.pnlRentedCars.Size = new System.Drawing.Size(283, 146);
             this.pnlRentedCars.TabIndex = 4;
@@ -160,7 +160,7 @@
             this.pnlAddCar.Controls.Add(this.label2);
             this.pnlAddCar.Controls.Add(this.label1);
             this.pnlAddCar.Controls.Add(this.btnAddCar);
-            this.pnlAddCar.Location = new System.Drawing.Point(13, 447);
+            this.pnlAddCar.Location = new System.Drawing.Point(349, 97);
             this.pnlAddCar.Name = "pnlAddCar";
             this.pnlAddCar.Size = new System.Drawing.Size(313, 144);
             this.pnlAddCar.TabIndex = 5;
@@ -244,29 +244,11 @@
             // pnlThankYouReturn
             // 
             this.pnlThankYouReturn.Controls.Add(this.label5);
-            this.pnlThankYouReturn.Location = new System.Drawing.Point(302, 94);
+            this.pnlThankYouReturn.Location = new System.Drawing.Point(33, 83);
             this.pnlThankYouReturn.Name = "pnlThankYouReturn";
             this.pnlThankYouReturn.Size = new System.Drawing.Size(200, 100);
             this.pnlThankYouReturn.TabIndex = 6;
             this.pnlThankYouReturn.Visible = false;
-            // 
-            // pnlThankYouRented
-            // 
-            this.pnlThankYouRented.Controls.Add(this.label6);
-            this.pnlThankYouRented.Location = new System.Drawing.Point(302, 200);
-            this.pnlThankYouRented.Name = "pnlThankYouRented";
-            this.pnlThankYouRented.Size = new System.Drawing.Size(200, 100);
-            this.pnlThankYouRented.TabIndex = 7;
-            this.pnlThankYouRented.Visible = false;
-            // 
-            // lblNumberOfCarsOpen
-            // 
-            this.lblNumberOfCarsOpen.AutoSize = true;
-            this.lblNumberOfCarsOpen.Location = new System.Drawing.Point(20, 19);
-            this.lblNumberOfCarsOpen.Name = "lblNumberOfCarsOpen";
-            this.lblNumberOfCarsOpen.Size = new System.Drawing.Size(111, 13);
-            this.lblNumberOfCarsOpen.TabIndex = 8;
-            this.lblNumberOfCarsOpen.Text = "Det finns 3 lediga bilar";
             // 
             // label5
             // 
@@ -277,6 +259,15 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Tack för att du lämna tillbacka bilen!";
             // 
+            // pnlThankYouRented
+            // 
+            this.pnlThankYouRented.Controls.Add(this.label6);
+            this.pnlThankYouRented.Location = new System.Drawing.Point(17, 86);
+            this.pnlThankYouRented.Name = "pnlThankYouRented";
+            this.pnlThankYouRented.Size = new System.Drawing.Size(200, 100);
+            this.pnlThankYouRented.TabIndex = 7;
+            this.pnlThankYouRented.Visible = false;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -286,15 +277,24 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Tack för att du hyrde en bil!";
             // 
+            // lblNumberOfCarsOpen
+            // 
+            this.lblNumberOfCarsOpen.AutoSize = true;
+            this.lblNumberOfCarsOpen.Location = new System.Drawing.Point(20, 19);
+            this.lblNumberOfCarsOpen.Name = "lblNumberOfCarsOpen";
+            this.lblNumberOfCarsOpen.Size = new System.Drawing.Size(111, 13);
+            this.lblNumberOfCarsOpen.TabIndex = 8;
+            this.lblNumberOfCarsOpen.Text = "Det finns 3 lediga bilar";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 635);
+            this.ClientSize = new System.Drawing.Size(824, 401);
             this.Controls.Add(this.lblNumberOfCarsOpen);
+            this.Controls.Add(this.pnlAddCar);
             this.Controls.Add(this.pnlThankYouRented);
             this.Controls.Add(this.pnlThankYouReturn);
-            this.Controls.Add(this.pnlAddCar);
             this.Controls.Add(this.pnlRentedCars);
             this.Controls.Add(this.pnlRentCar);
             this.Controls.Add(this.btnRentedCars);
