@@ -26,43 +26,65 @@ namespace Car_Renting_Program
 
         private void btnAvailibleCars_Click(object sender, EventArgs e)
         {
+            GUI();
             pnlRentCar.Visible = true;
-            PrintNotRentedCars();
+            PrintCars();
         }
 
         private void btnOpenAddCar_Click(object sender, EventArgs e)
         {
+            GUI();
             pnlAddCar.Visible = true;
         }
 
         private void btnRentedCars_Click(object sender, EventArgs e)
         {
+            GUI();
             pnlRentedCars.Visible = true;
+            PrintCars();
         }
 
         private void btnRentCar_Click(object sender, EventArgs e)
         {
-            pnlRentCar.Visible = false;
         }
 
         private void btnReturnCar_Click(object sender, EventArgs e)
         {
-            pnlRentedCars.Visible = false;
         }
 
         private void btnAddCar_Click(object sender, EventArgs e)
         {
-            pnlAddCar.Visible = false;
         }
 
-        public void PrintNotRentedCars()
+
+        
+        public void GUI()
+        {
+            pnlAddCar.Visible = false;
+            pnlRentCar.Visible = false;
+            pnlRentedCars.Visible = false;
+            pnlThankYouRent.Visible = false;
+            pnlThankYouRented.Visible = false;
+        }
+
+
+        public void PrintCars()
         {
             lstAvalibleCars.Items.Clear();
             foreach (RentedCars x in Car)
             {
-                if (x.Rented == false)
+                switch (x.Rented)
                 {
-                    lstAvalibleCars.Items.Add(x.CarName());
+                    case (false):
+                        lstAvalibleCars.Items.Add(x.CarName());
+                        break;
+
+                    case (true):
+                        lstRentedCars.Items.Add(x.CarName());
+                        break;
+
+                    default:
+                        break;
                 }
             }
         }
