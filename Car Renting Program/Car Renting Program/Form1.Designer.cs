@@ -95,11 +95,15 @@
             // 
             // pnlRentCar
             // 
+            this.pnlRentCar.Controls.Add(this.tbxCustemerNumber);
             this.pnlRentCar.Controls.Add(this.lstAvalibleCars);
+            this.pnlRentCar.Controls.Add(this.tbxCustmerName);
             this.pnlRentCar.Controls.Add(this.btnRentCar);
-            this.pnlRentCar.Location = new System.Drawing.Point(13, 93);
+            this.pnlRentCar.Controls.Add(this.label8);
+            this.pnlRentCar.Controls.Add(this.label7);
+            this.pnlRentCar.Location = new System.Drawing.Point(12, 89);
             this.pnlRentCar.Name = "pnlRentCar";
-            this.pnlRentCar.Size = new System.Drawing.Size(283, 146);
+            this.pnlRentCar.Size = new System.Drawing.Size(425, 146);
             this.pnlRentCar.TabIndex = 3;
             this.pnlRentCar.Visible = false;
             // 
@@ -127,7 +131,7 @@
             // 
             this.pnlRentedCars.Controls.Add(this.lstRentedCars);
             this.pnlRentedCars.Controls.Add(this.btnReturnCar);
-            this.pnlRentedCars.Location = new System.Drawing.Point(10, 93);
+            this.pnlRentedCars.Location = new System.Drawing.Point(23, 83);
             this.pnlRentedCars.Name = "pnlRentedCars";
             this.pnlRentedCars.Size = new System.Drawing.Size(283, 146);
             this.pnlRentedCars.TabIndex = 4;
@@ -155,10 +159,6 @@
             // 
             // pnlAddCar
             // 
-            this.pnlAddCar.Controls.Add(this.tbxCustemerNumber);
-            this.pnlAddCar.Controls.Add(this.tbxCustmerName);
-            this.pnlAddCar.Controls.Add(this.label8);
-            this.pnlAddCar.Controls.Add(this.label7);
             this.pnlAddCar.Controls.Add(this.tbxRegrristerNumber);
             this.pnlAddCar.Controls.Add(this.label4);
             this.pnlAddCar.Controls.Add(this.tbxColor);
@@ -168,7 +168,7 @@
             this.pnlAddCar.Controls.Add(this.label2);
             this.pnlAddCar.Controls.Add(this.label1);
             this.pnlAddCar.Controls.Add(this.btnAddCar);
-            this.pnlAddCar.Location = new System.Drawing.Point(16, 83);
+            this.pnlAddCar.Location = new System.Drawing.Point(15, 83);
             this.pnlAddCar.Name = "pnlAddCar";
             this.pnlAddCar.Size = new System.Drawing.Size(313, 208);
             this.pnlAddCar.TabIndex = 5;
@@ -297,7 +297,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(10, 144);
+            this.label7.Location = new System.Drawing.Point(198, 35);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 13);
             this.label7.TabIndex = 9;
@@ -306,7 +306,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(11, 171);
+            this.label8.Location = new System.Drawing.Point(199, 62);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(93, 13);
             this.label8.TabIndex = 10;
@@ -314,14 +314,14 @@
             // 
             // tbxCustmerName
             // 
-            this.tbxCustmerName.Location = new System.Drawing.Point(120, 141);
+            this.tbxCustmerName.Location = new System.Drawing.Point(308, 32);
             this.tbxCustmerName.Name = "tbxCustmerName";
             this.tbxCustmerName.Size = new System.Drawing.Size(100, 20);
             this.tbxCustmerName.TabIndex = 11;
             // 
             // tbxCustemerNumber
             // 
-            this.tbxCustemerNumber.Location = new System.Drawing.Point(120, 168);
+            this.tbxCustemerNumber.Location = new System.Drawing.Point(308, 59);
             this.tbxCustemerNumber.Name = "tbxCustemerNumber";
             this.tbxCustemerNumber.Size = new System.Drawing.Size(100, 20);
             this.tbxCustemerNumber.TabIndex = 12;
@@ -343,6 +343,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.pnlRentCar.ResumeLayout(false);
+            this.pnlRentCar.PerformLayout();
             this.pnlRentedCars.ResumeLayout(false);
             this.pnlAddCar.ResumeLayout(false);
             this.pnlAddCar.PerformLayout();

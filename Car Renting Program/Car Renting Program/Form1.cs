@@ -24,12 +24,9 @@ namespace Car_Renting_Program
             InitializeComponent();
             Cars = new System.Collections.ArrayList();
 
-            Cars.Add(new Car() { Maker = "Tyota", Color = "Röd", RegristerNumber = "AGD 582", Rented = false, Modle = "V38",
-                CustemerName = "Stefan Stenbäck", CustemerNumber = "070 812 793 74"});
-            Cars.Add(new Car() { Maker = "Opel", Color = "Blå", RegristerNumber = "GSF 153", Rented = false, Modle = "Winter55",
-                CustemerName = "larsh Lundquist", CustemerNumber = "073 474 314 54"});
-            Cars.Add(new Car() { Maker = "Volvo", Color = "Svart", RegristerNumber = "KFV 264", Rented = false, Modle = "JH73",
-                CustemerName = "Mia Envall", CustemerNumber = "070 841 434 35"});
+            Cars.Add(new Car() { Maker = "Tyota", Color = "Röd", RegristerNumber = "AGD 582", Rented = false, Modle = "V38"});
+            Cars.Add(new Car() { Maker = "Opel", Color = "Blå", RegristerNumber = "GSF 153", Rented = false, Modle = "Winter55"});
+            Cars.Add(new Car() { Maker = "Volvo", Color = "Svart", RegristerNumber = "KFV 264", Rented = false, Modle = "JH73"});
         }
 
         private void btnAvailibleCars_Click(object sender, EventArgs e)
@@ -55,6 +52,8 @@ namespace Car_Renting_Program
         private void btnRentCar_Click(object sender, EventArgs e) 
         {
             Car a = (Car)lstAvalibleCars.SelectedItem;
+            a.CustemerName = tbxCustmerName.Text;
+            a.CustemerNumber = tbxCustemerNumber.Text;
             a.Rented = true;
             PrintCars();
             AmountOfCars--;
@@ -62,6 +61,8 @@ namespace Car_Renting_Program
             GUI();
             pnlThankYouRented.Visible = true;
             lblThankYouRent.Text = "Tack för att du hyrde en bil";
+            tbxCustemerNumber.Clear();
+            tbxCustmerName.Clear();
         }
 
         private void btnReturnCar_Click(object sender, EventArgs e)
@@ -79,9 +80,7 @@ namespace Car_Renting_Program
         {
             AmountOfCars++;
             Cars.Add(new Car() { Maker = tbxMaker.Text, Color = tbxColor.Text, RegristerNumber = tbxRegrristerNumber.Text,
-                Rented = false, Modle = tbxModel.Text, CustemerName = tbxCustmerName.Text, CustemerNumber = tbxCustemerNumber.Text});
-            tbxCustemerNumber.Clear();
-            tbxCustmerName.Clear();
+                Rented = false, Modle = tbxModel.Text});
             tbxMaker.Clear();
             tbxColor.Clear();
             tbxModel.Clear();
