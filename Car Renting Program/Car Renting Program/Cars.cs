@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Car_Renting_Program
 {
-    class Cars
+    public class Car
     {
         public string Maker { get; set; }
         public string RegristerNumber { get; set; }
         public string Color { get; set; }
         public string Modle { get; set; }
-        public Boolean Rented { get; set; }
+        public bool Rented { get; set; }
 
-        public string CarName()
+        public override string ToString()
         {
             return string.Format("{0} {1}", Maker, RegristerNumber);
         }

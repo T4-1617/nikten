@@ -13,15 +13,19 @@ namespace Car_Renting_Program
    
     public partial class Form1 : Form
     {
-        System.Collections.ArrayList Car;
+        System.Collections.ArrayList Cars;
+        public int AmountOfCars = 3;
+        public Car a;
+
+
         public Form1()
         {
             InitializeComponent();
-            Car = new System.Collections.ArrayList();
+            Cars = new System.Collections.ArrayList();
 
-            Car.Add(new Cars() { Maker = "Tyota", Color = "Röd", RegristerNumber = "AGD 582", Rented = false, Modle = "V38"});
-            Car.Add(new Cars() { Maker = "Ople", Color = "Blå", RegristerNumber = "GSF 153", Rented = false, Modle = "Winter55" });
-            Car.Add(new Cars() { Maker = "Volvo", Color = "Svart", RegristerNumber = "KFV 264", Rented = false, Modle = "JH73"});
+            Cars.Add(new Car() { Maker = "Tyota", Color = "Röd", RegristerNumber = "AGD 582", Rented = false, Modle = "V38"});
+            Cars.Add(new Car() { Maker = "Ople", Color = "Blå", RegristerNumber = "GSF 153", Rented = false, Modle = "Winter55"});
+            Cars.Add(new Car() { Maker = "Volvo", Color = "Svart", RegristerNumber = "KFV 264", Rented = false, Modle = "JH73"});
         }
 
         private void btnAvailibleCars_Click(object sender, EventArgs e)
@@ -46,10 +50,8 @@ namespace Car_Renting_Program
 
         private void btnRentCar_Click(object sender, EventArgs e)
         {
-            int index = lstAvalibleCars.SelectedIndex;
-            Cars a = (Cars)Car[index];
+            a = (Car)lstAvalibleCars.SelectedItem;
             a.Rented = true;
-            lstAvalibleCars.SelectedItem = null;
             PrintCars();
         }
 
@@ -59,11 +61,14 @@ namespace Car_Renting_Program
 
         private void btnAddCar_Click(object sender, EventArgs e)
         {
-            Car.Add(new Cars() { Maker = tbxMaker.Text, Color = tbxColor.Text, RegristerNumber = tbxRegrristerNumber.Text, Rented = false, Modle = tbxModel.Text});
+            AmountOfCars++;
+            Cars.Add(new Car() { Maker = tbxMaker.Text, Color = tbxColor.Text, RegristerNumber = tbxRegrristerNumber.Text,
+                Rented = false, Modle = tbxModel.Text});
             tbxMaker.Clear();
             tbxColor.Clear();
             tbxModel.Clear();
             tbxRegrristerNumber.Clear();
+            lblNumberOfCarsOpen.Text = "Det finns " + AmountOfCars + " lediga";
             GUI();
         }
 
@@ -82,16 +87,17 @@ namespace Car_Renting_Program
         public void PrintCars()
         {
             lstAvalibleCars.Items.Clear();
-            foreach (Cars x in Car)
+            lstRentedCars.Items.Clear();
+            foreach (Car x in Cars)
             {
                 switch (x.Rented)
                 {
                     case (false):
-                        lstAvalibleCars.Items.Add(x.CarName());
+                        lstAvalibleCars.Items.Add(x);
                         break;
 
                     case (true):
-                        lstRentedCars.Items.Add(x.CarName());
+                        lstRentedCars.Items.Add(x);
                         break;
 
                     default:
