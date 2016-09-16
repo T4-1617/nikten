@@ -10,16 +10,24 @@ using System.Windows.Forms;
 
 namespace Car_Renting_Program
 {
+   
     public partial class Form1 : Form
     {
+        System.Collections.ArrayList Car;
         public Form1()
         {
             InitializeComponent();
+            Car = new System.Collections.ArrayList();
+
+            Car.Add(new RentedCars() { Maker = "Tyota", Color = "Röd", RegristerNumber = "AGD 582", Rented = false});
+            Car.Add(new RentedCars() { Maker = "Ople", Color = "Blå", RegristerNumber = "GSF 153", Rented = false });
+            Car.Add(new RentedCars() { Maker = "Volvo", Color = "Svart", RegristerNumber = "KFV 264", Rented = false });
         }
 
         private void btnAvailibleCars_Click(object sender, EventArgs e)
         {
             pnlRentCar.Visible = true;
+            PrintNotRentedCars();
         }
 
         private void btnOpenAddCar_Click(object sender, EventArgs e)
@@ -45,6 +53,18 @@ namespace Car_Renting_Program
         private void btnAddCar_Click(object sender, EventArgs e)
         {
             pnlAddCar.Visible = false;
+        }
+
+        public void PrintNotRentedCars()
+        {
+            lstAvalibleCars.Items.Clear();
+            foreach (var Bannan in Car)
+            {
+                if (Bannan.GetType().Name == "RentedCars")
+                {
+                    lstAvalibleCars.Items.Add("Bil");
+                }
+            }
         }
     }
 }
