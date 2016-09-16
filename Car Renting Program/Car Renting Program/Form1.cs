@@ -19,9 +19,9 @@ namespace Car_Renting_Program
             InitializeComponent();
             Car = new System.Collections.ArrayList();
 
-            Car.Add(new RentedCars() { Maker = "Tyota", Color = "Röd", RegristerNumber = "AGD 582", Rented = false});
-            Car.Add(new RentedCars() { Maker = "Ople", Color = "Blå", RegristerNumber = "GSF 153", Rented = false });
-            Car.Add(new RentedCars() { Maker = "Volvo", Color = "Svart", RegristerNumber = "KFV 264", Rented = false });
+            Car.Add(new Cars() { Maker = "Tyota", Color = "Röd", RegristerNumber = "AGD 582", Rented = false});
+            Car.Add(new Cars() { Maker = "Ople", Color = "Blå", RegristerNumber = "GSF 153", Rented = false });
+            Car.Add(new Cars() { Maker = "Volvo", Color = "Svart", RegristerNumber = "KFV 264", Rented = false });
         }
 
         private void btnAvailibleCars_Click(object sender, EventArgs e)
