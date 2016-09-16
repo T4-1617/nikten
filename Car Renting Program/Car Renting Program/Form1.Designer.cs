@@ -38,6 +38,8 @@
             this.lstRentedCars = new System.Windows.Forms.ListBox();
             this.btnReturnCar = new System.Windows.Forms.Button();
             this.pnlAddCar = new System.Windows.Forms.Panel();
+            this.tbxRegrristerNumber = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.tbxColor = new System.Windows.Forms.TextBox();
             this.tbxMaker = new System.Windows.Forms.TextBox();
             this.tbxModel = new System.Windows.Forms.TextBox();
@@ -45,14 +47,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAddCar = new System.Windows.Forms.Button();
-            this.pnlThankYouRent = new System.Windows.Forms.Panel();
+            this.pnlThankYouReturn = new System.Windows.Forms.Panel();
             this.pnlThankYouRented = new System.Windows.Forms.Panel();
             this.lblNumberOfCarsOpen = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tbxRegrristerNumber = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.pnlRentCar.SuspendLayout();
             this.pnlRentedCars.SuspendLayout();
             this.pnlAddCar.SuspendLayout();
+            this.pnlThankYouReturn.SuspendLayout();
+            this.pnlThankYouRented.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAvailibleCars
@@ -132,6 +136,7 @@
             this.lstRentedCars.Name = "lstRentedCars";
             this.lstRentedCars.Size = new System.Drawing.Size(196, 134);
             this.lstRentedCars.TabIndex = 1;
+            this.lstRentedCars.SelectedIndexChanged += new System.EventHandler(this.lstRentedCars_SelectedIndexChanged);
             // 
             // btnReturnCar
             // 
@@ -160,6 +165,23 @@
             this.pnlAddCar.Size = new System.Drawing.Size(313, 144);
             this.pnlAddCar.TabIndex = 5;
             this.pnlAddCar.Visible = false;
+            // 
+            // tbxRegrristerNumber
+            // 
+            this.tbxRegrristerNumber.Location = new System.Drawing.Point(120, 99);
+            this.tbxRegrristerNumber.Name = "tbxRegrristerNumber";
+            this.tbxRegrristerNumber.Size = new System.Drawing.Size(100, 20);
+            this.tbxRegrristerNumber.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label4.Location = new System.Drawing.Point(7, 102);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Regristerings numer:";
             // 
             // tbxColor
             // 
@@ -219,16 +241,18 @@
             this.btnAddCar.UseVisualStyleBackColor = true;
             this.btnAddCar.Click += new System.EventHandler(this.btnAddCar_Click);
             // 
-            // pnlThankYouRent
+            // pnlThankYouReturn
             // 
-            this.pnlThankYouRent.Location = new System.Drawing.Point(302, 94);
-            this.pnlThankYouRent.Name = "pnlThankYouRent";
-            this.pnlThankYouRent.Size = new System.Drawing.Size(200, 100);
-            this.pnlThankYouRent.TabIndex = 6;
-            this.pnlThankYouRent.Visible = false;
+            this.pnlThankYouReturn.Controls.Add(this.label5);
+            this.pnlThankYouReturn.Location = new System.Drawing.Point(302, 94);
+            this.pnlThankYouReturn.Name = "pnlThankYouReturn";
+            this.pnlThankYouReturn.Size = new System.Drawing.Size(200, 100);
+            this.pnlThankYouReturn.TabIndex = 6;
+            this.pnlThankYouReturn.Visible = false;
             // 
             // pnlThankYouRented
             // 
+            this.pnlThankYouRented.Controls.Add(this.label6);
             this.pnlThankYouRented.Location = new System.Drawing.Point(302, 200);
             this.pnlThankYouRented.Name = "pnlThankYouRented";
             this.pnlThankYouRented.Size = new System.Drawing.Size(200, 100);
@@ -244,22 +268,23 @@
             this.lblNumberOfCarsOpen.TabIndex = 8;
             this.lblNumberOfCarsOpen.Text = "Det finns 3 lediga bilar";
             // 
-            // label4
+            // label5
             // 
-            this.label4.AutoSize = true;
-            this.label4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label4.Location = new System.Drawing.Point(7, 102);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Regristerings numer:";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(19, 40);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(178, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Tack för att du lämna tillbacka bilen!";
             // 
-            // tbxRegrristerNumber
+            // label6
             // 
-            this.tbxRegrristerNumber.Location = new System.Drawing.Point(120, 99);
-            this.tbxRegrristerNumber.Name = "tbxRegrristerNumber";
-            this.tbxRegrristerNumber.Size = new System.Drawing.Size(100, 20);
-            this.tbxRegrristerNumber.TabIndex = 8;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(34, 38);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(137, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Tack för att du hyrde en bil!";
             // 
             // Form1
             // 
@@ -268,7 +293,7 @@
             this.ClientSize = new System.Drawing.Size(884, 635);
             this.Controls.Add(this.lblNumberOfCarsOpen);
             this.Controls.Add(this.pnlThankYouRented);
-            this.Controls.Add(this.pnlThankYouRent);
+            this.Controls.Add(this.pnlThankYouReturn);
             this.Controls.Add(this.pnlAddCar);
             this.Controls.Add(this.pnlRentedCars);
             this.Controls.Add(this.pnlRentCar);
@@ -281,6 +306,10 @@
             this.pnlRentedCars.ResumeLayout(false);
             this.pnlAddCar.ResumeLayout(false);
             this.pnlAddCar.PerformLayout();
+            this.pnlThankYouReturn.ResumeLayout(false);
+            this.pnlThankYouReturn.PerformLayout();
+            this.pnlThankYouRented.ResumeLayout(false);
+            this.pnlThankYouRented.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,11 +334,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAddCar;
-        private System.Windows.Forms.Panel pnlThankYouRent;
+        private System.Windows.Forms.Panel pnlThankYouReturn;
         private System.Windows.Forms.Panel pnlThankYouRented;
         private System.Windows.Forms.Label lblNumberOfCarsOpen;
         private System.Windows.Forms.TextBox tbxRegrristerNumber;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
 

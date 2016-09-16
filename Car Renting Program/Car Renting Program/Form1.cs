@@ -48,11 +48,15 @@ namespace Car_Renting_Program
             PrintCars();
         }
 
-        private void btnRentCar_Click(object sender, EventArgs e)
+        private void btnRentCar_Click(object sender, EventArgs e) 
         {
             a = (Car)lstAvalibleCars.SelectedItem;
             a.Rented = true;
             PrintCars();
+            AmountOfCars--;
+            lblNumberOfCarsOpen.Text = "Det finns " + AmountOfCars + " lediga bilar";
+            GUI();
+            pnlThankYouRented.Visible = true;
         }
 
         private void btnReturnCar_Click(object sender, EventArgs e)
@@ -68,7 +72,7 @@ namespace Car_Renting_Program
             tbxColor.Clear();
             tbxModel.Clear();
             tbxRegrristerNumber.Clear();
-            lblNumberOfCarsOpen.Text = "Det finns " + AmountOfCars + " lediga";
+            lblNumberOfCarsOpen.Text = "Det finns " + AmountOfCars + " lediga bilar";
             GUI();
         }
 
@@ -79,7 +83,7 @@ namespace Car_Renting_Program
             pnlAddCar.Visible = false;
             pnlRentCar.Visible = false;
             pnlRentedCars.Visible = false;
-            pnlThankYouRent.Visible = false;
+            pnlThankYouReturn.Visible = false;
             pnlThankYouRented.Visible = false;
         }
 
@@ -109,6 +113,11 @@ namespace Car_Renting_Program
         private void lstAvalibleCars_SelectedIndexChanged(object sender, EventArgs e)
         {
             btnRentCar.Enabled = true;
+        }
+
+        private void lstRentedCars_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnReturnCar.Enabled = true;
         }
     }
 }
