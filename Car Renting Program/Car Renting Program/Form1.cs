@@ -15,7 +15,6 @@ namespace Car_Renting_Program
     {
         System.Collections.ArrayList Cars;
         public int AmountOfCars = 3;
-        public Car a;
 
 
         public Form1()
@@ -50,7 +49,7 @@ namespace Car_Renting_Program
 
         private void btnRentCar_Click(object sender, EventArgs e) 
         {
-            a = (Car)lstAvalibleCars.SelectedItem;
+            Car a = (Car)lstAvalibleCars.SelectedItem;
             a.Rented = true;
             PrintCars();
             AmountOfCars--;
@@ -61,6 +60,13 @@ namespace Car_Renting_Program
 
         private void btnReturnCar_Click(object sender, EventArgs e)
         {
+            Car b = (Car)lstRentedCars.SelectedItem;
+            b.Rented = false;
+            PrintCars();
+            AmountOfCars++;
+            lblNumberOfCarsOpen.Text = "Det finns " + AmountOfCars + " lediga bilar";
+            GUI();
+            pnlThankYouReturn.Visible = true;
         }
 
         private void btnAddCar_Click(object sender, EventArgs e)
