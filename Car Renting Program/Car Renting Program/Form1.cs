@@ -58,11 +58,11 @@ namespace Car_Renting_Program
         public void PrintNotRentedCars()
         {
             lstAvalibleCars.Items.Clear();
-            foreach (var Bannan in Car)
+            foreach (RentedCars x in Car)
             {
-                if (Bannan.GetType().Name == "RentedCars")
+                if (x.Rented == false)
                 {
-                    lstAvalibleCars.Items.Add("Bil");
+                    lstAvalibleCars.Items.Add(x.CarName());
                 }
             }
         }
