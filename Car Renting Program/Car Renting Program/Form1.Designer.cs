@@ -160,7 +160,7 @@
             this.pnlAddCar.Controls.Add(this.label2);
             this.pnlAddCar.Controls.Add(this.label1);
             this.pnlAddCar.Controls.Add(this.btnAddCar);
-            this.pnlAddCar.Location = new System.Drawing.Point(349, 97);
+            this.pnlAddCar.Location = new System.Drawing.Point(16, 83);
             this.pnlAddCar.Name = "pnlAddCar";
             this.pnlAddCar.Size = new System.Drawing.Size(313, 144);
             this.pnlAddCar.TabIndex = 5;
@@ -290,7 +290,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(824, 401);
+            this.ClientSize = new System.Drawing.Size(382, 289);
             this.Controls.Add(this.lblNumberOfCarsOpen);
             this.Controls.Add(this.pnlAddCar);
             this.Controls.Add(this.pnlThankYouRented);
