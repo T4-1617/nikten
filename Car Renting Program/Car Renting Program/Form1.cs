@@ -15,6 +15,8 @@ namespace Car_Renting_Program
     {
         System.Collections.ArrayList Cars;
         public int AmountOfCars = 3;
+        public string CustemerNumber = string.Empty;
+        public string CustemerName = string.Empty;
 
 
         public Form1()
@@ -22,9 +24,12 @@ namespace Car_Renting_Program
             InitializeComponent();
             Cars = new System.Collections.ArrayList();
 
-            Cars.Add(new Car() { Maker = "Tyota", Color = "Röd", RegristerNumber = "AGD 582", Rented = false, Modle = "V38"});
-            Cars.Add(new Car() { Maker = "Opel", Color = "Blå", RegristerNumber = "GSF 153", Rented = false, Modle = "Winter55"});
-            Cars.Add(new Car() { Maker = "Volvo", Color = "Svart", RegristerNumber = "KFV 264", Rented = false, Modle = "JH73"});
+            Cars.Add(new Car() { Maker = "Tyota", Color = "Röd", RegristerNumber = "AGD 582", Rented = false, Modle = "V38",
+                CustemerName = "Stefan Stenbäck", CustemerNumber = "070 812 793 74"});
+            Cars.Add(new Car() { Maker = "Opel", Color = "Blå", RegristerNumber = "GSF 153", Rented = false, Modle = "Winter55",
+                CustemerName = "larsh Lundquist", CustemerNumber = "073 474 314 54"});
+            Cars.Add(new Car() { Maker = "Volvo", Color = "Svart", RegristerNumber = "KFV 264", Rented = false, Modle = "JH73",
+                CustemerName = "Mia Envall", CustemerNumber = "070 841 434 35"});
         }
 
         private void btnAvailibleCars_Click(object sender, EventArgs e)
@@ -56,6 +61,7 @@ namespace Car_Renting_Program
             lblNumberOfCarsOpen.Text = "Det finns " + AmountOfCars + " lediga bilar";
             GUI();
             pnlThankYouRented.Visible = true;
+            lblThankYouRent.Text = "Tack för att du hyrde en bil";
         }
 
         private void btnReturnCar_Click(object sender, EventArgs e)
@@ -73,7 +79,9 @@ namespace Car_Renting_Program
         {
             AmountOfCars++;
             Cars.Add(new Car() { Maker = tbxMaker.Text, Color = tbxColor.Text, RegristerNumber = tbxRegrristerNumber.Text,
-                Rented = false, Modle = tbxModel.Text});
+                Rented = false, Modle = tbxModel.Text, CustemerName = tbxCustmerName.Text, CustemerNumber = tbxCustemerNumber.Text});
+            tbxCustemerNumber.Clear();
+            tbxCustmerName.Clear();
             tbxMaker.Clear();
             tbxColor.Clear();
             tbxModel.Clear();
@@ -126,7 +134,8 @@ namespace Car_Renting_Program
         private void lstRentedCars_SelectedIndexChanged(object sender, EventArgs e)
         {
             Car b = (Car)lstRentedCars.SelectedItem;
-            MessageBox.Show(" Model: " + b.Modle + "\r Skapare: " + b.Maker + "\r Färg: " + b.Color + "\r Regristerings numer: " + b.RegristerNumber);
+            MessageBox.Show(" Model: " + b.Modle + "\r Skapare: " + b.Maker + "\r Färg: " + b.Color + "\r Regristerings numer: " +
+                b.RegristerNumber + "\r \r Bilen är hyrd av: " + b.CustemerName + "\r Deras nummer är: " + b.CustemerNumber);
             btnReturnCar.Enabled = true;
         }
     }

@@ -13,6 +13,8 @@ namespace Car_Renting_Program
         public string Color { get; set; }
         public string Modle { get; set; }
         public bool Rented { get; set; }
+        public string CustemerName { get; set; }
+        public string CustemerNumber { get; set; }
 
         public override string ToString()
         {
