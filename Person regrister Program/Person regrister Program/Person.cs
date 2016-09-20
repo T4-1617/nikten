@@ -14,7 +14,7 @@ namespace Person_regrister_Program
     public class Emplooye : Person
     {
         public int EmplooyeID { get; set; }
-        public int Pay { get; set; }
+        public string Pay { get; set; }
     }
 
     public class Deliverer : Person

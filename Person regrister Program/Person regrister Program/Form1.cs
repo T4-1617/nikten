@@ -14,6 +14,7 @@ namespace Person_regrister_Program
     {
         System.Collections.ArrayList Persons;
         bool[] CustemerID = new bool[100];
+        public int AmountOfEmplooyees = 0;
 
         public Form1()
         {
@@ -36,17 +37,28 @@ namespace Person_regrister_Program
         public void PrintList()
         {
             listBox1.Items.Clear();
-            foreach (Costemer x in Persons)
+            foreach (var x in Persons)
             {
-                listBox1.Items.Add(x);
+                if (x is Costemer)
+                    listBox1.Items.Add(x);
+            }
+            foreach (var z in Persons)
+            {
+                if (z is Emplooye)
+                    listBox1.Items.Add(z);
+            }
+            foreach (var y in Persons)
+            {
+                if (y is Deliverer)
+                    listBox1.Items.Add(y);
             }
         }
 
         public void GUI()
         {
             pnlCustemer.Visible = false;
-            pnlDeliverer.Visible = false;
             pnlEmplooye.Visible = false;
+            pnlDeliverer.Visible = false;
             pnlInfoCostemer.Visible = false;
             pnlInfoDeliverer.Visible = false;
             pnlInfoEmplooye.Visible = false;
@@ -81,18 +93,19 @@ namespace Person_regrister_Program
 
         private void btnCustemerAdd_Click(object sender, EventArgs e)
         {
-            Costemer a = new Costemer();
-            a.FirstName = tbxCustemerFirstName.Text;
-            a.LastName = tbxCustemerLastName.Text;
-            a.Telefone = tbxCustemerPhoneNumber.Text;
-
             Random r = new Random();
             for (int i = 0; i < 1; i++)
             {
                 int randomID = r.Next(0, 101);
                 if (CustemerID[randomID] == false)
                 {
-                    a.CustemerID = randomID;
+                    Persons.Add(new Costemer()
+                    {
+                        FirstName = tbxCustemerFirstName.Text,
+                        LastName = tbxCustemerLastName.Text,
+                        Telefone = tbxCustemerPhoneNumber.Text,
+                        CustemerID = randomID
+                    });
                     CustemerID[randomID] = true;
                 }
                 else
@@ -100,11 +113,51 @@ namespace Person_regrister_Program
                     i--;
                 }
             }
-            Persons.Add(a);
+
+            tbxCustemerFirstName.Text = string.Empty;
+            tbxCustemerLastName.Text = string.Empty;
+            tbxCustemerPhoneNumber.Text = string.Empty;
+
             PrintList();
+            GUI();
         }
 
         private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEmplooyeAdd_Click(object sender, EventArgs e)
+        {
+            Persons.Add(new Emplooye()
+            {
+                FirstName = tbxEmplooyeFirstName.Text,
+                LastName = tbxEmplooyeLastName.Text,
+                EmplooyeID = AmountOfEmplooyees,
+                Pay = tbxEmplooyePay.Text,
+                Telefone = tbxEmplooyePhoneNumber.Text
+            });
+
+            tbxEmplooyeFirstName.Text = string.Empty;
+            tbxEmplooyeLastName.Text = string.Empty;
+            tbxEmplooyePay.Text = string.Empty;
+            tbxEmplooyePhoneNumber.Text = string.Empty;
+
+            PrintList();
+            GUI();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlInfoEmplooye_Paint(object sender, PaintEventArgs e)
         {
 
         }
