@@ -33,6 +33,15 @@ namespace Person_regrister_Program
             }
         }
 
+        public void PrintList()
+        {
+            listBox1.Items.Clear();
+            foreach (Costemer x in Persons)
+            {
+                listBox1.Items.Add(x);
+            }
+        }
+
         public void GUI()
         {
             pnlCustemer.Visible = false;
@@ -91,6 +100,12 @@ namespace Person_regrister_Program
                     i--;
                 }
             }
+            Persons.Add(a);
+            PrintList();
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
 
         }
     }
