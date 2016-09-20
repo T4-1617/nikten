@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Person_regrister_Program
 {
-    class Costemer : Person
+    public class Costemer : Person
     {
         public int CustemerID { get; set; }
     }
 
-    class Emplooye : Person
+    public class Emplooye : Person
     {
         public int EmplooyeID { get; set; }
         public int Pay { get; set; }
     }
 
-    class Deliverer : Person
+    public class Deliverer : Person
     {
         public string ContactPerson { get; set; }
         public string Company { get; set; }

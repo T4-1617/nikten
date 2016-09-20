@@ -29,16 +29,15 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pnlCostemer = new System.Windows.Forms.Panel();
+            this.pnlCustemer = new System.Windows.Forms.Panel();
             this.pnlEmplooye = new System.Windows.Forms.Panel();
             this.pnlDeliverer = new System.Windows.Forms.Panel();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.pnlInfoCostemer = new System.Windows.Forms.Panel();
             this.pnlInfoDeliverer = new System.Windows.Forms.Panel();
             this.pnlInfoEmplooye = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnCustemerCancel = new System.Windows.Forms.Button();
+            this.btnCustemerAdd = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -51,7 +50,27 @@
             this.button13 = new System.Windows.Forms.Button();
             this.lblCountingPersons = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.pnlCostemer.SuspendLayout();
+            this.tbxCustemerFirstName = new System.Windows.Forms.TextBox();
+            this.tbxCustemerLastName = new System.Windows.Forms.TextBox();
+            this.tbxCustemerPhoneNumber = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.pnlCustemer.SuspendLayout();
             this.pnlEmplooye.SuspendLayout();
             this.pnlDeliverer.SuspendLayout();
             this.pnlInfoCostemer.SuspendLayout();
@@ -68,46 +87,57 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
-            // button1
+            // pnlCustemer
             // 
-            this.button1.Location = new System.Drawing.Point(192, 10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // pnlCostemer
-            // 
-            this.pnlCostemer.Controls.Add(this.button3);
-            this.pnlCostemer.Controls.Add(this.button2);
-            this.pnlCostemer.Location = new System.Drawing.Point(40, 70);
-            this.pnlCostemer.Name = "pnlCostemer";
-            this.pnlCostemer.Size = new System.Drawing.Size(200, 100);
-            this.pnlCostemer.TabIndex = 3;
+            this.pnlCustemer.Controls.Add(this.label5);
+            this.pnlCustemer.Controls.Add(this.label3);
+            this.pnlCustemer.Controls.Add(this.label2);
+            this.pnlCustemer.Controls.Add(this.tbxCustemerPhoneNumber);
+            this.pnlCustemer.Controls.Add(this.tbxCustemerLastName);
+            this.pnlCustemer.Controls.Add(this.tbxCustemerFirstName);
+            this.pnlCustemer.Controls.Add(this.btnCustemerAdd);
+            this.pnlCustemer.Controls.Add(this.btnCustemerCancel);
+            this.pnlCustemer.Location = new System.Drawing.Point(40, 70);
+            this.pnlCustemer.Name = "pnlCustemer";
+            this.pnlCustemer.Size = new System.Drawing.Size(241, 142);
+            this.pnlCustemer.TabIndex = 3;
             // 
             // pnlEmplooye
             // 
+            this.pnlEmplooye.Controls.Add(this.label8);
+            this.pnlEmplooye.Controls.Add(this.label7);
+            this.pnlEmplooye.Controls.Add(this.label6);
+            this.pnlEmplooye.Controls.Add(this.label4);
+            this.pnlEmplooye.Controls.Add(this.textBox7);
+            this.pnlEmplooye.Controls.Add(this.textBox6);
+            this.pnlEmplooye.Controls.Add(this.textBox5);
+            this.pnlEmplooye.Controls.Add(this.textBox3);
             this.pnlEmplooye.Controls.Add(this.button5);
             this.pnlEmplooye.Controls.Add(this.button4);
-            this.pnlEmplooye.Location = new System.Drawing.Point(246, 70);
+            this.pnlEmplooye.Location = new System.Drawing.Point(306, 70);
             this.pnlEmplooye.Name = "pnlEmplooye";
-            this.pnlEmplooye.Size = new System.Drawing.Size(200, 100);
+            this.pnlEmplooye.Size = new System.Drawing.Size(254, 142);
             this.pnlEmplooye.TabIndex = 4;
             // 
             // pnlDeliverer
             // 
+            this.pnlDeliverer.Controls.Add(this.textBox10);
+            this.pnlDeliverer.Controls.Add(this.textBox9);
+            this.pnlDeliverer.Controls.Add(this.textBox8);
+            this.pnlDeliverer.Controls.Add(this.label11);
+            this.pnlDeliverer.Controls.Add(this.label10);
+            this.pnlDeliverer.Controls.Add(this.label9);
             this.pnlDeliverer.Controls.Add(this.button7);
             this.pnlDeliverer.Controls.Add(this.button6);
-            this.pnlDeliverer.Location = new System.Drawing.Point(452, 70);
+            this.pnlDeliverer.Location = new System.Drawing.Point(594, 70);
             this.pnlDeliverer.Name = "pnlDeliverer";
-            this.pnlDeliverer.Size = new System.Drawing.Size(200, 100);
+            this.pnlDeliverer.Size = new System.Drawing.Size(262, 142);
             this.pnlDeliverer.TabIndex = 5;
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(40, 296);
+            this.listBox1.Location = new System.Drawing.Point(40, 284);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(120, 121);
             this.listBox1.TabIndex = 6;
@@ -116,7 +146,7 @@
             // 
             this.pnlInfoCostemer.Controls.Add(this.button10);
             this.pnlInfoCostemer.Controls.Add(this.button9);
-            this.pnlInfoCostemer.Location = new System.Drawing.Point(202, 248);
+            this.pnlInfoCostemer.Location = new System.Drawing.Point(202, 284);
             this.pnlInfoCostemer.Name = "pnlInfoCostemer";
             this.pnlInfoCostemer.Size = new System.Drawing.Size(200, 100);
             this.pnlInfoCostemer.TabIndex = 7;
@@ -125,7 +155,7 @@
             // 
             this.pnlInfoDeliverer.Controls.Add(this.button11);
             this.pnlInfoDeliverer.Controls.Add(this.button8);
-            this.pnlInfoDeliverer.Location = new System.Drawing.Point(472, 248);
+            this.pnlInfoDeliverer.Location = new System.Drawing.Point(510, 284);
             this.pnlInfoDeliverer.Name = "pnlInfoDeliverer";
             this.pnlInfoDeliverer.Size = new System.Drawing.Size(200, 100);
             this.pnlInfoDeliverer.TabIndex = 8;
@@ -134,32 +164,34 @@
             // 
             this.pnlInfoEmplooye.Controls.Add(this.button13);
             this.pnlInfoEmplooye.Controls.Add(this.button12);
-            this.pnlInfoEmplooye.Location = new System.Drawing.Point(202, 355);
+            this.pnlInfoEmplooye.Location = new System.Drawing.Point(202, 451);
             this.pnlInfoEmplooye.Name = "pnlInfoEmplooye";
             this.pnlInfoEmplooye.Size = new System.Drawing.Size(200, 100);
             this.pnlInfoEmplooye.TabIndex = 9;
             // 
-            // button2
+            // btnCustemerCancel
             // 
-            this.button2.Location = new System.Drawing.Point(122, 74);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCustemerCancel.Location = new System.Drawing.Point(162, 116);
+            this.btnCustemerCancel.Name = "btnCustemerCancel";
+            this.btnCustemerCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCustemerCancel.TabIndex = 0;
+            this.btnCustemerCancel.Text = "Cancel";
+            this.btnCustemerCancel.UseVisualStyleBackColor = true;
+            this.btnCustemerCancel.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnCustemerAdd
             // 
-            this.button3.Location = new System.Drawing.Point(45, 74);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnCustemerAdd.Location = new System.Drawing.Point(81, 116);
+            this.btnCustemerAdd.Name = "btnCustemerAdd";
+            this.btnCustemerAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnCustemerAdd.TabIndex = 1;
+            this.btnCustemerAdd.Text = "Lägg till";
+            this.btnCustemerAdd.UseVisualStyleBackColor = true;
+            this.btnCustemerAdd.Click += new System.EventHandler(this.btnCustemerAdd_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(122, 74);
+            this.button4.Location = new System.Drawing.Point(176, 116);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 0;
@@ -168,7 +200,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(41, 74);
+            this.button5.Location = new System.Drawing.Point(95, 116);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 1;
@@ -177,7 +209,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(122, 74);
+            this.button6.Location = new System.Drawing.Point(184, 116);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 0;
@@ -186,7 +218,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(41, 74);
+            this.button7.Location = new System.Drawing.Point(103, 116);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 23);
             this.button7.TabIndex = 1;
@@ -250,7 +282,7 @@
             // lblCountingPersons
             // 
             this.lblCountingPersons.AutoSize = true;
-            this.lblCountingPersons.Location = new System.Drawing.Point(80, 191);
+            this.lblCountingPersons.Location = new System.Drawing.Point(78, 232);
             this.lblCountingPersons.Name = "lblCountingPersons";
             this.lblCountingPersons.Size = new System.Drawing.Size(169, 13);
             this.lblCountingPersons.TabIndex = 10;
@@ -263,12 +295,173 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 11;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // tbxCustemerFirstName
+            // 
+            this.tbxCustemerFirstName.Location = new System.Drawing.Point(137, 8);
+            this.tbxCustemerFirstName.Name = "tbxCustemerFirstName";
+            this.tbxCustemerFirstName.Size = new System.Drawing.Size(100, 20);
+            this.tbxCustemerFirstName.TabIndex = 2;
+            // 
+            // tbxCustemerLastName
+            // 
+            this.tbxCustemerLastName.Location = new System.Drawing.Point(137, 34);
+            this.tbxCustemerLastName.Name = "tbxCustemerLastName";
+            this.tbxCustemerLastName.Size = new System.Drawing.Size(100, 20);
+            this.tbxCustemerLastName.TabIndex = 3;
+            // 
+            // tbxCustemerPhoneNumber
+            // 
+            this.tbxCustemerPhoneNumber.Location = new System.Drawing.Point(137, 60);
+            this.tbxCustemerPhoneNumber.Name = "tbxCustemerPhoneNumber";
+            this.tbxCustemerPhoneNumber.Size = new System.Drawing.Size(100, 20);
+            this.tbxCustemerPhoneNumber.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(4, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Förnamn";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(4, 37);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "efternemn";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(4, 64);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(76, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "telefonnummer";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(151, 8);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 2;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(151, 35);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 3;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(151, 61);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.TabIndex = 4;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(151, 86);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 20);
+            this.textBox7.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(4, 11);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "label4";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 38);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "label6";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 63);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "label7";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 89);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "label8";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(4, 11);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "label9";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(4, 38);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(41, 13);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "label10";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(7, 61);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(41, 13);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "label11";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(159, 8);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(100, 20);
+            this.textBox8.TabIndex = 5;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(159, 34);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(100, 20);
+            this.textBox9.TabIndex = 6;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(159, 60);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(100, 20);
+            this.textBox10.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(780, 553);
+            this.ClientSize = new System.Drawing.Size(1128, 707);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.lblCountingPersons);
             this.Controls.Add(this.pnlInfoEmplooye);
@@ -277,14 +470,16 @@
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.pnlDeliverer);
             this.Controls.Add(this.pnlEmplooye);
-            this.Controls.Add(this.pnlCostemer);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pnlCustemer);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.pnlCostemer.ResumeLayout(false);
+            this.pnlCustemer.ResumeLayout(false);
+            this.pnlCustemer.PerformLayout();
             this.pnlEmplooye.ResumeLayout(false);
+            this.pnlEmplooye.PerformLayout();
             this.pnlDeliverer.ResumeLayout(false);
+            this.pnlDeliverer.PerformLayout();
             this.pnlInfoCostemer.ResumeLayout(false);
             this.pnlInfoDeliverer.ResumeLayout(false);
             this.pnlInfoEmplooye.ResumeLayout(false);
@@ -297,9 +492,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel pnlCostemer;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel pnlCustemer;
+        private System.Windows.Forms.Button btnCustemerAdd;
+        private System.Windows.Forms.Button btnCustemerCancel;
         private System.Windows.Forms.Panel pnlEmplooye;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
@@ -318,6 +513,26 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Label lblCountingPersons;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox tbxCustemerLastName;
+        private System.Windows.Forms.TextBox tbxCustemerFirstName;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tbxCustemerPhoneNumber;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
     }
 }
 
