@@ -42,11 +42,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbxDelivererPhoneNumber = new System.Windows.Forms.TextBox();
+            this.tbxDelivererCompany = new System.Windows.Forms.TextBox();
+            this.TbxDelivererConstactPerson = new System.Windows.Forms.TextBox();
             this.btnDelivererAdd = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnDelivererCancel = new System.Windows.Forms.Button();
             this.pnlEmplooye = new System.Windows.Forms.Panel();
             this.tbxEmplooyePay = new System.Windows.Forms.TextBox();
             this.tbxEmplooyeLastName = new System.Windows.Forms.TextBox();
@@ -175,11 +175,11 @@
             this.pnlDeliverer.Controls.Add(this.label7);
             this.pnlDeliverer.Controls.Add(this.label6);
             this.pnlDeliverer.Controls.Add(this.label4);
-            this.pnlDeliverer.Controls.Add(this.textBox6);
-            this.pnlDeliverer.Controls.Add(this.textBox5);
-            this.pnlDeliverer.Controls.Add(this.textBox3);
+            this.pnlDeliverer.Controls.Add(this.tbxDelivererPhoneNumber);
+            this.pnlDeliverer.Controls.Add(this.tbxDelivererCompany);
+            this.pnlDeliverer.Controls.Add(this.TbxDelivererConstactPerson);
             this.pnlDeliverer.Controls.Add(this.btnDelivererAdd);
-            this.pnlDeliverer.Controls.Add(this.button4);
+            this.pnlDeliverer.Controls.Add(this.btnDelivererCancel);
             this.pnlDeliverer.Location = new System.Drawing.Point(678, 67);
             this.pnlDeliverer.Name = "pnlDeliverer";
             this.pnlDeliverer.Size = new System.Drawing.Size(254, 142);
@@ -212,26 +212,26 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "kontakt person";
             // 
-            // textBox6
+            // tbxDelivererPhoneNumber
             // 
-            this.textBox6.Location = new System.Drawing.Point(151, 61);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 4;
+            this.tbxDelivererPhoneNumber.Location = new System.Drawing.Point(151, 61);
+            this.tbxDelivererPhoneNumber.Name = "tbxDelivererPhoneNumber";
+            this.tbxDelivererPhoneNumber.Size = new System.Drawing.Size(100, 20);
+            this.tbxDelivererPhoneNumber.TabIndex = 4;
             // 
-            // textBox5
+            // tbxDelivererCompany
             // 
-            this.textBox5.Location = new System.Drawing.Point(151, 35);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 3;
+            this.tbxDelivererCompany.Location = new System.Drawing.Point(151, 35);
+            this.tbxDelivererCompany.Name = "tbxDelivererCompany";
+            this.tbxDelivererCompany.Size = new System.Drawing.Size(100, 20);
+            this.tbxDelivererCompany.TabIndex = 3;
             // 
-            // textBox3
+            // TbxDelivererConstactPerson
             // 
-            this.textBox3.Location = new System.Drawing.Point(151, 8);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 2;
+            this.TbxDelivererConstactPerson.Location = new System.Drawing.Point(151, 8);
+            this.TbxDelivererConstactPerson.Name = "TbxDelivererConstactPerson";
+            this.TbxDelivererConstactPerson.Size = new System.Drawing.Size(100, 20);
+            this.TbxDelivererConstactPerson.TabIndex = 2;
             // 
             // btnDelivererAdd
             // 
@@ -243,14 +243,14 @@
             this.btnDelivererAdd.UseVisualStyleBackColor = true;
             this.btnDelivererAdd.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button4
+            // btnDelivererCancel
             // 
-            this.button4.Location = new System.Drawing.Point(176, 116);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnDelivererCancel.Location = new System.Drawing.Point(176, 116);
+            this.btnDelivererCancel.Name = "btnDelivererCancel";
+            this.btnDelivererCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnDelivererCancel.TabIndex = 0;
+            this.btnDelivererCancel.Text = "Cancel";
+            this.btnDelivererCancel.UseVisualStyleBackColor = true;
             // 
             // pnlEmplooye
             // 
@@ -333,7 +333,7 @@
             this.btnEmplooyCancel.Name = "btnEmplooyCancel";
             this.btnEmplooyCancel.Size = new System.Drawing.Size(75, 23);
             this.btnEmplooyCancel.TabIndex = 0;
-            this.btnEmplooyCancel.Text = "cancel";
+            this.btnEmplooyCancel.Text = "Cancel";
             this.btnEmplooyCancel.UseVisualStyleBackColor = true;
             // 
             // listBox1
@@ -516,7 +516,7 @@
         private System.Windows.Forms.Button btnCustemerCancel;
         private System.Windows.Forms.Panel pnlDeliverer;
         private System.Windows.Forms.Button btnDelivererAdd;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnDelivererCancel;
         private System.Windows.Forms.Panel pnlEmplooye;
         private System.Windows.Forms.Button btnEmplooyeAdd;
         private System.Windows.Forms.Button btnEmplooyCancel;
@@ -534,9 +534,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbxDelivererPhoneNumber;
+        private System.Windows.Forms.TextBox tbxDelivererCompany;
+        private System.Windows.Forms.TextBox TbxDelivererConstactPerson;
         private System.Windows.Forms.TextBox tbxEmplooyePay;
         private System.Windows.Forms.TextBox tbxEmplooyeLastName;
         private System.Windows.Forms.TextBox tbxEmplooyeFirstName;

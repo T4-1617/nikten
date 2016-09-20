@@ -19,7 +19,6 @@ namespace Person_regrister_Program
 
     public class Deliverer : Person
     {
-        public string ContactPerson { get; set; }
         public string Company { get; set; }
     }
 

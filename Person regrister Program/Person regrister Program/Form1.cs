@@ -60,8 +60,6 @@ namespace Person_regrister_Program
             pnlEmplooye.Visible = false;
             pnlDeliverer.Visible = false;
             pnlInfoCostemer.Visible = false;
-            pnlInfoDeliverer.Visible = false;
-            pnlInfoEmplooye.Visible = false;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -154,12 +152,40 @@ namespace Person_regrister_Program
 
         private void button5_Click(object sender, EventArgs e)
         {
+            string FullName = TbxDelivererConstactPerson.Text;
+            int LettersInFullName = FullName.Length;
+            int LettersInFirstName = 0;
+            int LettersInLastName = 0;
+            string FirstNameTemp = string.Empty;
+            string LastNameTemp = string.Empty;
 
-        }
 
-        private void pnlInfoEmplooye_Paint(object sender, PaintEventArgs e)
-        {
+            foreach (int item in FullName)
+            {
+                if (item != ' ')
+                    LettersInFirstName++;
+            }
 
+            LettersInLastName = LettersInFullName - LettersInFirstName;
+
+            for (int i = 0; i < LettersInFirstName; i++)
+            {
+                FirstNameTemp += FullName[i];
+            }
+
+            for (int i = LettersInFirstName + 1; i < LettersInFullName; i++)
+            {
+                LastNameTemp += FullName[i];
+            }
+
+            Persons.Add(new Deliverer() { FirstName = FirstNameTemp, LastName = LastNameTemp, Company = tbxDelivererCompany.Text, Telefone = tbxDelivererPhoneNumber.Text });
+
+            tbxDelivererCompany.Text = string.Empty;
+            TbxDelivererConstactPerson.Text = string.Empty;
+            tbxDelivererPhoneNumber.Text = string.Empty;
+
+            PrintList();
+            GUI();
         }
     }
 }
