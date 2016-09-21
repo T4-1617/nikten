@@ -86,7 +86,7 @@ namespace Person_regrister_Program
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            GUI();
         }
 
         private void btnCustemerAdd_Click(object sender, EventArgs e)
@@ -139,15 +139,7 @@ namespace Person_regrister_Program
             tbxInfoNumber.Visible = false;
             tbxInfoConstatPerson.Visible = false;
             tbxInfoCompany.Visible = false;
-
-            tbxInfoEmplooyeID.Enabled = false;
-            tbxInfoFirstName.Enabled = false;
-            tbxInfoID.Enabled = false;
-            tbxInfoLastName.Enabled = false;
-            tbxInfoNumber.Enabled = false;
             tbxInfoPay.Visible = false;
-            tbxInfoConstatPerson.Enabled = false;
-            tbxInfoCompany.Enabled = false;
 
             Person a = (Person)listBox1.SelectedItem;
             if (a is Costemer)
@@ -229,7 +221,6 @@ namespace Person_regrister_Program
             string FullName = TbxDelivererConstactPerson.Text;
             int LettersInFullName = FullName.Length;
             int LettersInFirstName = 0;
-            int LettersInLastName = 0;
             string FirstNameTemp = string.Empty;
             string LastNameTemp = string.Empty;
 
@@ -239,8 +230,6 @@ namespace Person_regrister_Program
                 if (item != ' ')
                     LettersInFirstName++;
             }
-
-            LettersInLastName = LettersInFullName - LettersInFirstName;
 
             for (int i = 0; i < LettersInFirstName; i++)
             {
@@ -259,6 +248,75 @@ namespace Person_regrister_Program
             tbxDelivererPhoneNumber.Text = string.Empty;
 
             PrintList();
+            GUI();
+        }
+
+        private void btnInfoSave_Click(object sender, EventArgs e)
+        {
+            Person a = (Person)listBox1.SelectedItem;
+            if (a is Costemer)
+            {
+                Costemer b = (Costemer)listBox1.SelectedItem;
+                b.FirstName = tbxInfoFirstName.Text;
+                b.LastName = tbxInfoLastName.Text;
+                b.Telefone = tbxInfoNumber.Text;
+            }
+            else if (a is Emplooye)
+            {
+                Emplooye b = (Emplooye)listBox1.SelectedItem;
+                b.FirstName = tbxInfoFirstName.Text;
+                b.LastName = tbxInfoLastName.Text;
+                b.Pay = tbxInfoPay.Text;
+                b.Telefone = tbxInfoNumber.Text;
+            }
+            else if (a is Deliverer)
+            {
+                Deliverer b = (Deliverer)listBox1.SelectedItem;
+                b.Telefone = tbxInfoNumber.Text;
+                b.Company = tbxInfoCompany.Text;
+
+                string FullName = tbxInfoConstatPerson.Text;
+                int LettersInFullName = FullName.Length;
+                int LettersInFirstName = 0;
+                string FirstNameTemp = string.Empty;
+                string LastNameTemp = string.Empty;
+
+                foreach (int item in FullName)
+                {
+                    if (item != ' ')
+                        LettersInFirstName++;
+                }
+
+                for (int i = 0; i < LettersInFirstName; i++)
+                {
+                    FirstNameTemp += FullName[i];
+                }
+
+                for (int i = LettersInFirstName + 1; i < LettersInFullName; i++)
+                {
+                    LastNameTemp += FullName[i];
+                }
+
+                b.FirstName = FirstNameTemp;
+                b.LastName = LastNameTemp;
+            }
+
+            PrintList();
+            GUI();
+        }
+
+        private void btnEmplooyCancel_Click(object sender, EventArgs e)
+        {
+            GUI();
+        }
+
+        private void btnDelivererCancel_Click(object sender, EventArgs e)
+        {
+            GUI();
+        }
+
+        private void btnInfoCancel_Click(object sender, EventArgs e)
+        {
             GUI();
         }
     }

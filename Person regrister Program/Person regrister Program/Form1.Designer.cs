@@ -60,26 +60,26 @@
             this.btnEmplooyCancel = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.pnlInfo = new System.Windows.Forms.Panel();
+            this.tbxInfoCompany = new System.Windows.Forms.TextBox();
+            this.tbxInfoConstatPerson = new System.Windows.Forms.TextBox();
+            this.lblInfoCompany = new System.Windows.Forms.Label();
+            this.lblInfoContactPerson = new System.Windows.Forms.Label();
+            this.tbxInfoPay = new System.Windows.Forms.TextBox();
+            this.lblInfoEmplooyePay = new System.Windows.Forms.Label();
+            this.lblInfoEmplooyeID = new System.Windows.Forms.Label();
+            this.tbxInfoEmplooyeID = new System.Windows.Forms.TextBox();
             this.tbxInfoID = new System.Windows.Forms.TextBox();
             this.lblInfoCustemerId = new System.Windows.Forms.Label();
             this.lblPhoneNumber = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnInfoCancel = new System.Windows.Forms.Button();
             this.lblLastName = new System.Windows.Forms.Label();
-            this.btnInfoEdit = new System.Windows.Forms.Button();
+            this.btnInfoSave = new System.Windows.Forms.Button();
             this.lblfirstName = new System.Windows.Forms.Label();
             this.tbxInfoFirstName = new System.Windows.Forms.TextBox();
             this.tbxInfoNumber = new System.Windows.Forms.TextBox();
             this.tbxInfoLastName = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblCountingPersons = new System.Windows.Forms.Label();
-            this.tbxInfoEmplooyeID = new System.Windows.Forms.TextBox();
-            this.lblInfoEmplooyeID = new System.Windows.Forms.Label();
-            this.lblInfoEmplooyePay = new System.Windows.Forms.Label();
-            this.tbxInfoPay = new System.Windows.Forms.TextBox();
-            this.lblInfoContactPerson = new System.Windows.Forms.Label();
-            this.lblInfoCompany = new System.Windows.Forms.Label();
-            this.tbxInfoConstatPerson = new System.Windows.Forms.TextBox();
-            this.tbxInfoCompany = new System.Windows.Forms.TextBox();
             this.pnlCustemer.SuspendLayout();
             this.pnlDeliverer.SuspendLayout();
             this.pnlEmplooye.SuspendLayout();
@@ -188,7 +188,7 @@
             this.pnlDeliverer.Controls.Add(this.TbxDelivererConstactPerson);
             this.pnlDeliverer.Controls.Add(this.btnDelivererAdd);
             this.pnlDeliverer.Controls.Add(this.btnDelivererCancel);
-            this.pnlDeliverer.Location = new System.Drawing.Point(678, 67);
+            this.pnlDeliverer.Location = new System.Drawing.Point(40, 70);
             this.pnlDeliverer.Name = "pnlDeliverer";
             this.pnlDeliverer.Size = new System.Drawing.Size(254, 142);
             this.pnlDeliverer.TabIndex = 4;
@@ -259,6 +259,7 @@
             this.btnDelivererCancel.TabIndex = 0;
             this.btnDelivererCancel.Text = "Cancel";
             this.btnDelivererCancel.UseVisualStyleBackColor = true;
+            this.btnDelivererCancel.Click += new System.EventHandler(this.btnDelivererCancel_Click);
             // 
             // pnlEmplooye
             // 
@@ -272,7 +273,7 @@
             this.pnlEmplooye.Controls.Add(this.label9);
             this.pnlEmplooye.Controls.Add(this.btnEmplooyeAdd);
             this.pnlEmplooye.Controls.Add(this.btnEmplooyCancel);
-            this.pnlEmplooye.Location = new System.Drawing.Point(366, 67);
+            this.pnlEmplooye.Location = new System.Drawing.Point(40, 70);
             this.pnlEmplooye.Name = "pnlEmplooye";
             this.pnlEmplooye.Size = new System.Drawing.Size(254, 142);
             this.pnlEmplooye.TabIndex = 5;
@@ -359,13 +360,14 @@
             this.btnEmplooyCancel.TabIndex = 0;
             this.btnEmplooyCancel.Text = "Cancel";
             this.btnEmplooyCancel.UseVisualStyleBackColor = true;
+            this.btnEmplooyCancel.Click += new System.EventHandler(this.btnEmplooyCancel_Click);
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(40, 284);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(156, 329);
+            this.listBox1.Size = new System.Drawing.Size(156, 186);
             this.listBox1.TabIndex = 6;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -382,17 +384,82 @@
             this.pnlInfo.Controls.Add(this.tbxInfoID);
             this.pnlInfo.Controls.Add(this.lblInfoCustemerId);
             this.pnlInfo.Controls.Add(this.lblPhoneNumber);
-            this.pnlInfo.Controls.Add(this.button10);
+            this.pnlInfo.Controls.Add(this.btnInfoCancel);
             this.pnlInfo.Controls.Add(this.lblLastName);
-            this.pnlInfo.Controls.Add(this.btnInfoEdit);
+            this.pnlInfo.Controls.Add(this.btnInfoSave);
             this.pnlInfo.Controls.Add(this.lblfirstName);
             this.pnlInfo.Controls.Add(this.tbxInfoFirstName);
             this.pnlInfo.Controls.Add(this.tbxInfoNumber);
             this.pnlInfo.Controls.Add(this.tbxInfoLastName);
             this.pnlInfo.Location = new System.Drawing.Point(202, 284);
             this.pnlInfo.Name = "pnlInfo";
-            this.pnlInfo.Size = new System.Drawing.Size(254, 258);
+            this.pnlInfo.Size = new System.Drawing.Size(254, 189);
             this.pnlInfo.TabIndex = 7;
+            // 
+            // tbxInfoCompany
+            // 
+            this.tbxInfoCompany.Location = new System.Drawing.Point(141, 29);
+            this.tbxInfoCompany.Name = "tbxInfoCompany";
+            this.tbxInfoCompany.Size = new System.Drawing.Size(100, 20);
+            this.tbxInfoCompany.TabIndex = 25;
+            // 
+            // tbxInfoConstatPerson
+            // 
+            this.tbxInfoConstatPerson.Location = new System.Drawing.Point(141, 3);
+            this.tbxInfoConstatPerson.Name = "tbxInfoConstatPerson";
+            this.tbxInfoConstatPerson.Size = new System.Drawing.Size(100, 20);
+            this.tbxInfoConstatPerson.TabIndex = 24;
+            // 
+            // lblInfoCompany
+            // 
+            this.lblInfoCompany.AutoSize = true;
+            this.lblInfoCompany.Location = new System.Drawing.Point(8, 32);
+            this.lblInfoCompany.Name = "lblInfoCompany";
+            this.lblInfoCompany.Size = new System.Drawing.Size(43, 13);
+            this.lblInfoCompany.TabIndex = 23;
+            this.lblInfoCompany.Text = "Företag";
+            // 
+            // lblInfoContactPerson
+            // 
+            this.lblInfoContactPerson.AutoSize = true;
+            this.lblInfoContactPerson.Location = new System.Drawing.Point(8, 6);
+            this.lblInfoContactPerson.Name = "lblInfoContactPerson";
+            this.lblInfoContactPerson.Size = new System.Drawing.Size(80, 13);
+            this.lblInfoContactPerson.TabIndex = 22;
+            this.lblInfoContactPerson.Text = "Kontact Person";
+            // 
+            // tbxInfoPay
+            // 
+            this.tbxInfoPay.Location = new System.Drawing.Point(141, 110);
+            this.tbxInfoPay.Name = "tbxInfoPay";
+            this.tbxInfoPay.Size = new System.Drawing.Size(100, 20);
+            this.tbxInfoPay.TabIndex = 21;
+            // 
+            // lblInfoEmplooyePay
+            // 
+            this.lblInfoEmplooyePay.AutoSize = true;
+            this.lblInfoEmplooyePay.Location = new System.Drawing.Point(8, 113);
+            this.lblInfoEmplooyePay.Name = "lblInfoEmplooyePay";
+            this.lblInfoEmplooyePay.Size = new System.Drawing.Size(70, 13);
+            this.lblInfoEmplooyePay.TabIndex = 20;
+            this.lblInfoEmplooyePay.Text = "Anstäldas lön";
+            // 
+            // lblInfoEmplooyeID
+            // 
+            this.lblInfoEmplooyeID.AutoSize = true;
+            this.lblInfoEmplooyeID.Location = new System.Drawing.Point(11, 85);
+            this.lblInfoEmplooyeID.Name = "lblInfoEmplooyeID";
+            this.lblInfoEmplooyeID.Size = new System.Drawing.Size(67, 13);
+            this.lblInfoEmplooyeID.TabIndex = 19;
+            this.lblInfoEmplooyeID.Text = "Anstäldas ID";
+            // 
+            // tbxInfoEmplooyeID
+            // 
+            this.tbxInfoEmplooyeID.Enabled = false;
+            this.tbxInfoEmplooyeID.Location = new System.Drawing.Point(141, 82);
+            this.tbxInfoEmplooyeID.Name = "tbxInfoEmplooyeID";
+            this.tbxInfoEmplooyeID.Size = new System.Drawing.Size(100, 20);
+            this.tbxInfoEmplooyeID.TabIndex = 18;
             // 
             // tbxInfoID
             // 
@@ -420,14 +487,15 @@
             this.lblPhoneNumber.TabIndex = 15;
             this.lblPhoneNumber.Text = "telefonnummer";
             // 
-            // button10
+            // btnInfoCancel
             // 
-            this.button10.Location = new System.Drawing.Point(176, 232);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 1;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnInfoCancel.Location = new System.Drawing.Point(172, 158);
+            this.btnInfoCancel.Name = "btnInfoCancel";
+            this.btnInfoCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnInfoCancel.TabIndex = 1;
+            this.btnInfoCancel.Text = "Cancel";
+            this.btnInfoCancel.UseVisualStyleBackColor = true;
+            this.btnInfoCancel.Click += new System.EventHandler(this.btnInfoCancel_Click);
             // 
             // lblLastName
             // 
@@ -438,14 +506,15 @@
             this.lblLastName.TabIndex = 14;
             this.lblLastName.Text = "efternemn";
             // 
-            // btnInfoEdit
+            // btnInfoSave
             // 
-            this.btnInfoEdit.Location = new System.Drawing.Point(95, 232);
-            this.btnInfoEdit.Name = "btnInfoEdit";
-            this.btnInfoEdit.Size = new System.Drawing.Size(75, 23);
-            this.btnInfoEdit.TabIndex = 0;
-            this.btnInfoEdit.Text = "Edit";
-            this.btnInfoEdit.UseVisualStyleBackColor = true;
+            this.btnInfoSave.Location = new System.Drawing.Point(91, 158);
+            this.btnInfoSave.Name = "btnInfoSave";
+            this.btnInfoSave.Size = new System.Drawing.Size(75, 23);
+            this.btnInfoSave.TabIndex = 0;
+            this.btnInfoSave.Text = "Save";
+            this.btnInfoSave.UseVisualStyleBackColor = true;
+            this.btnInfoSave.Click += new System.EventHandler(this.btnInfoSave_Click);
             // 
             // lblfirstName
             // 
@@ -458,7 +527,6 @@
             // 
             // tbxInfoFirstName
             // 
-            this.tbxInfoFirstName.Enabled = false;
             this.tbxInfoFirstName.Location = new System.Drawing.Point(141, 3);
             this.tbxInfoFirstName.Name = "tbxInfoFirstName";
             this.tbxInfoFirstName.Size = new System.Drawing.Size(100, 20);
@@ -466,7 +534,6 @@
             // 
             // tbxInfoNumber
             // 
-            this.tbxInfoNumber.Enabled = false;
             this.tbxInfoNumber.Location = new System.Drawing.Point(141, 55);
             this.tbxInfoNumber.Name = "tbxInfoNumber";
             this.tbxInfoNumber.Size = new System.Drawing.Size(100, 20);
@@ -474,7 +541,6 @@
             // 
             // tbxInfoLastName
             // 
-            this.tbxInfoLastName.Enabled = false;
             this.tbxInfoLastName.Location = new System.Drawing.Point(141, 29);
             this.tbxInfoLastName.Name = "tbxInfoLastName";
             this.tbxInfoLastName.Size = new System.Drawing.Size(100, 20);
@@ -498,77 +564,11 @@
             this.lblCountingPersons.TabIndex = 10;
             this.lblCountingPersons.Text = "Du har 0 kunder, 0 ansälda och 0 ";
             // 
-            // tbxInfoEmplooyeID
-            // 
-            this.tbxInfoEmplooyeID.Enabled = false;
-            this.tbxInfoEmplooyeID.Location = new System.Drawing.Point(141, 82);
-            this.tbxInfoEmplooyeID.Name = "tbxInfoEmplooyeID";
-            this.tbxInfoEmplooyeID.Size = new System.Drawing.Size(100, 20);
-            this.tbxInfoEmplooyeID.TabIndex = 18;
-            // 
-            // lblInfoEmplooyeID
-            // 
-            this.lblInfoEmplooyeID.AutoSize = true;
-            this.lblInfoEmplooyeID.Location = new System.Drawing.Point(11, 85);
-            this.lblInfoEmplooyeID.Name = "lblInfoEmplooyeID";
-            this.lblInfoEmplooyeID.Size = new System.Drawing.Size(67, 13);
-            this.lblInfoEmplooyeID.TabIndex = 19;
-            this.lblInfoEmplooyeID.Text = "Anstäldas ID";
-            // 
-            // lblInfoEmplooyePay
-            // 
-            this.lblInfoEmplooyePay.AutoSize = true;
-            this.lblInfoEmplooyePay.Location = new System.Drawing.Point(8, 113);
-            this.lblInfoEmplooyePay.Name = "lblInfoEmplooyePay";
-            this.lblInfoEmplooyePay.Size = new System.Drawing.Size(70, 13);
-            this.lblInfoEmplooyePay.TabIndex = 20;
-            this.lblInfoEmplooyePay.Text = "Anstäldas lön";
-            // 
-            // tbxInfoPay
-            // 
-            this.tbxInfoPay.Enabled = false;
-            this.tbxInfoPay.Location = new System.Drawing.Point(141, 110);
-            this.tbxInfoPay.Name = "tbxInfoPay";
-            this.tbxInfoPay.Size = new System.Drawing.Size(100, 20);
-            this.tbxInfoPay.TabIndex = 21;
-            // 
-            // lblInfoContactPerson
-            // 
-            this.lblInfoContactPerson.AutoSize = true;
-            this.lblInfoContactPerson.Location = new System.Drawing.Point(8, 6);
-            this.lblInfoContactPerson.Name = "lblInfoContactPerson";
-            this.lblInfoContactPerson.Size = new System.Drawing.Size(80, 13);
-            this.lblInfoContactPerson.TabIndex = 22;
-            this.lblInfoContactPerson.Text = "Kontact Person";
-            // 
-            // lblInfoCompany
-            // 
-            this.lblInfoCompany.AutoSize = true;
-            this.lblInfoCompany.Location = new System.Drawing.Point(8, 32);
-            this.lblInfoCompany.Name = "lblInfoCompany";
-            this.lblInfoCompany.Size = new System.Drawing.Size(43, 13);
-            this.lblInfoCompany.TabIndex = 23;
-            this.lblInfoCompany.Text = "Företag";
-            // 
-            // tbxInfoConstatPerson
-            // 
-            this.tbxInfoConstatPerson.Location = new System.Drawing.Point(141, 3);
-            this.tbxInfoConstatPerson.Name = "tbxInfoConstatPerson";
-            this.tbxInfoConstatPerson.Size = new System.Drawing.Size(100, 20);
-            this.tbxInfoConstatPerson.TabIndex = 24;
-            // 
-            // tbxInfoCompany
-            // 
-            this.tbxInfoCompany.Location = new System.Drawing.Point(141, 29);
-            this.tbxInfoCompany.Name = "tbxInfoCompany";
-            this.tbxInfoCompany.Size = new System.Drawing.Size(100, 20);
-            this.tbxInfoCompany.TabIndex = 25;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1128, 707);
+            this.ClientSize = new System.Drawing.Size(488, 483);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.lblCountingPersons);
             this.Controls.Add(this.pnlInfo);
@@ -607,8 +607,8 @@
         private System.Windows.Forms.Button btnEmplooyCancel;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Panel pnlInfo;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button btnInfoEdit;
+        private System.Windows.Forms.Button btnInfoCancel;
+        private System.Windows.Forms.Button btnInfoSave;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox tbxCustemerLastName;
         private System.Windows.Forms.TextBox tbxCustemerFirstName;
