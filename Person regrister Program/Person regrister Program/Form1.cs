@@ -59,7 +59,7 @@ namespace Person_regrister_Program
             pnlCustemer.Visible = false;
             pnlEmplooye.Visible = false;
             pnlDeliverer.Visible = false;
-            pnlInfoCostemer.Visible = false;
+            pnlInfo.Visible = false;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -120,14 +120,64 @@ namespace Person_regrister_Program
             GUI();
         }
 
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            pnlInfo.Visible = true;
 
+            lblfirstName.Visible = false;
+            lblInfoCustemerId.Visible = false;
+            lblInfoEmplooyeID.Visible = false;
+            lblLastName.Visible = false;
+            lblInfoEmplooyePay.Visible = false;
+
+            tbxInfoEmplooyeID.Visible = false;
+            tbxInfoFirstName.Visible = false;
+            tbxInfoID.Visible = false;
+            tbxInfoLastName.Visible = false;
+            tbxInfoNumber.Visible = false;
+
+            tbxInfoEmplooyeID.Enabled = false;
+            tbxInfoFirstName.Enabled = false;
+            tbxInfoID.Enabled = false;
+            tbxInfoLastName.Enabled = false;
+            tbxInfoNumber.Enabled = false;
+            tbxInfoPay.Visible = false;
+
+            Person a = (Person)listBox1.SelectedItem;
+            if (a is Costemer)
+            {
+                lblfirstName.Visible = true;
+                lblLastName.Visible = true;
+                lblInfoCustemerId.Visible = true;
+                tbxInfoFirstName.Visible = true;
+                tbxInfoID.Visible = true;
+                tbxInfoLastName.Visible = true;
+                tbxInfoNumber.Visible = true;
+
+                Costemer b = (Costemer)listBox1.SelectedItem;
+                tbxInfoFirstName.Text = b.FirstName;
+                tbxInfoLastName.Text = b.LastName;
+                tbxInfoID.Text = b.CustemerID.ToString();
+                tbxInfoNumber.Text = b.Telefone;
+            }
+            else if (a is Emplooye)
+            {
+                lblfirstName.Visible = true;
+                lblLastName.Visible = true;
+                lblInfoEmplooyeID.Visible = true;
+                lblInfoEmplooyePay.Visible = true;
+                tbxInfoFirstName.Visible = true;
+                tbxInfoEmplooyeID.Visible = true;
+                tbxInfoLastName.Visible = true;
+                tbxInfoNumber.Visible = true;
+
+                Emplooye b = (Emplooye)listBox1.SelectedItem;
+                tbxInfoFirstName.Text = b.FirstName;
+                tbxInfoLastName.Text = b.LastName;
+                tbxInfoEmplooyeID.Text = b.EmplooyeID.ToString();
+                tbxInfoNumber.Text = b.Telefone;
+                tbxInfoPay.Text = b.Pay;
+            }
         }
 
         private void btnEmplooyeAdd_Click(object sender, EventArgs e)
