@@ -129,12 +129,16 @@ namespace Person_regrister_Program
             lblInfoEmplooyeID.Visible = false;
             lblLastName.Visible = false;
             lblInfoEmplooyePay.Visible = false;
+            lblCountingPersons.Visible = false;
+            lblInfoCompany.Visible = false;
 
             tbxInfoEmplooyeID.Visible = false;
             tbxInfoFirstName.Visible = false;
             tbxInfoID.Visible = false;
             tbxInfoLastName.Visible = false;
             tbxInfoNumber.Visible = false;
+            tbxInfoConstatPerson.Visible = false;
+            tbxInfoCompany.Visible = false;
 
             tbxInfoEmplooyeID.Enabled = false;
             tbxInfoFirstName.Enabled = false;
@@ -142,6 +146,8 @@ namespace Person_regrister_Program
             tbxInfoLastName.Enabled = false;
             tbxInfoNumber.Enabled = false;
             tbxInfoPay.Visible = false;
+            tbxInfoConstatPerson.Enabled = false;
+            tbxInfoCompany.Enabled = false;
 
             Person a = (Person)listBox1.SelectedItem;
             if (a is Costemer)
@@ -149,6 +155,7 @@ namespace Person_regrister_Program
                 lblfirstName.Visible = true;
                 lblLastName.Visible = true;
                 lblInfoCustemerId.Visible = true;
+
                 tbxInfoFirstName.Visible = true;
                 tbxInfoID.Visible = true;
                 tbxInfoLastName.Visible = true;
@@ -166,10 +173,12 @@ namespace Person_regrister_Program
                 lblLastName.Visible = true;
                 lblInfoEmplooyeID.Visible = true;
                 lblInfoEmplooyePay.Visible = true;
+
                 tbxInfoFirstName.Visible = true;
                 tbxInfoEmplooyeID.Visible = true;
                 tbxInfoLastName.Visible = true;
                 tbxInfoNumber.Visible = true;
+                tbxInfoPay.Visible = true;
 
                 Emplooye b = (Emplooye)listBox1.SelectedItem;
                 tbxInfoFirstName.Text = b.FirstName;
@@ -177,6 +186,21 @@ namespace Person_regrister_Program
                 tbxInfoEmplooyeID.Text = b.EmplooyeID.ToString();
                 tbxInfoNumber.Text = b.Telefone;
                 tbxInfoPay.Text = b.Pay;
+            }
+            else if (a is Deliverer)
+            {
+                lblCountingPersons.Visible = true;
+                lblInfoCompany.Visible = true;
+                lblPhoneNumber.Visible = true;
+
+                tbxInfoConstatPerson.Visible = true;
+                tbxInfoCompany.Visible = true;
+                tbxInfoNumber.Visible = true;
+
+                Deliverer b = (Deliverer)listBox1.SelectedItem;
+                tbxInfoConstatPerson.Text = b.ToString();
+                tbxInfoCompany.Text = b.Company;
+                tbxInfoNumber.Text = b.Telefone;
             }
         }
 

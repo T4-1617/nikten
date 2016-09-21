@@ -76,6 +76,10 @@
             this.lblInfoEmplooyeID = new System.Windows.Forms.Label();
             this.lblInfoEmplooyePay = new System.Windows.Forms.Label();
             this.tbxInfoPay = new System.Windows.Forms.TextBox();
+            this.lblInfoContactPerson = new System.Windows.Forms.Label();
+            this.lblInfoCompany = new System.Windows.Forms.Label();
+            this.tbxInfoConstatPerson = new System.Windows.Forms.TextBox();
+            this.tbxInfoCompany = new System.Windows.Forms.TextBox();
             this.pnlCustemer.SuspendLayout();
             this.pnlDeliverer.SuspendLayout();
             this.pnlEmplooye.SuspendLayout();
@@ -367,6 +371,10 @@
             // 
             // pnlInfo
             // 
+            this.pnlInfo.Controls.Add(this.tbxInfoCompany);
+            this.pnlInfo.Controls.Add(this.tbxInfoConstatPerson);
+            this.pnlInfo.Controls.Add(this.lblInfoCompany);
+            this.pnlInfo.Controls.Add(this.lblInfoContactPerson);
             this.pnlInfo.Controls.Add(this.tbxInfoPay);
             this.pnlInfo.Controls.Add(this.lblInfoEmplooyePay);
             this.pnlInfo.Controls.Add(this.lblInfoEmplooyeID);
@@ -524,6 +532,38 @@
             this.tbxInfoPay.Size = new System.Drawing.Size(100, 20);
             this.tbxInfoPay.TabIndex = 21;
             // 
+            // lblInfoContactPerson
+            // 
+            this.lblInfoContactPerson.AutoSize = true;
+            this.lblInfoContactPerson.Location = new System.Drawing.Point(8, 6);
+            this.lblInfoContactPerson.Name = "lblInfoContactPerson";
+            this.lblInfoContactPerson.Size = new System.Drawing.Size(80, 13);
+            this.lblInfoContactPerson.TabIndex = 22;
+            this.lblInfoContactPerson.Text = "Kontact Person";
+            // 
+            // lblInfoCompany
+            // 
+            this.lblInfoCompany.AutoSize = true;
+            this.lblInfoCompany.Location = new System.Drawing.Point(8, 32);
+            this.lblInfoCompany.Name = "lblInfoCompany";
+            this.lblInfoCompany.Size = new System.Drawing.Size(43, 13);
+            this.lblInfoCompany.TabIndex = 23;
+            this.lblInfoCompany.Text = "Företag";
+            // 
+            // tbxInfoConstatPerson
+            // 
+            this.tbxInfoConstatPerson.Location = new System.Drawing.Point(141, 3);
+            this.tbxInfoConstatPerson.Name = "tbxInfoConstatPerson";
+            this.tbxInfoConstatPerson.Size = new System.Drawing.Size(100, 20);
+            this.tbxInfoConstatPerson.TabIndex = 24;
+            // 
+            // tbxInfoCompany
+            // 
+            this.tbxInfoCompany.Location = new System.Drawing.Point(141, 29);
+            this.tbxInfoCompany.Name = "tbxInfoCompany";
+            this.tbxInfoCompany.Size = new System.Drawing.Size(100, 20);
+            this.tbxInfoCompany.TabIndex = 25;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -603,6 +643,10 @@
         private System.Windows.Forms.TextBox tbxInfoEmplooyeID;
         private System.Windows.Forms.TextBox tbxInfoPay;
         private System.Windows.Forms.Label lblInfoEmplooyePay;
+        private System.Windows.Forms.TextBox tbxInfoCompany;
+        private System.Windows.Forms.TextBox tbxInfoConstatPerson;
+        private System.Windows.Forms.Label lblInfoCompany;
+        private System.Windows.Forms.Label lblInfoContactPerson;
     }
 }
 
