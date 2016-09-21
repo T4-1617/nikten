@@ -15,6 +15,8 @@ namespace Person_regrister_Program
         System.Collections.ArrayList Persons;
         bool[] CustemerID = new bool[100];
         public int AmountOfEmplooyees = 0;
+        public int AmountOfCustemers = 0;
+        public int AmountOfDeliverers = 0;
 
         public Form1()
         {
@@ -36,22 +38,36 @@ namespace Person_regrister_Program
 
         public void PrintList()
         {
+            AmountOfCustemers = 0;
+            AmountOfDeliverers = 0;
             listBox1.Items.Clear();
+
             foreach (var x in Persons)
             {
                 if (x is Costemer)
+                {
+                    AmountOfCustemers++;
                     listBox1.Items.Add(x);
+                }
+
             }
             foreach (var z in Persons)
             {
                 if (z is Emplooye)
+                {
                     listBox1.Items.Add(z);
+                }
             }
             foreach (var y in Persons)
             {
                 if (y is Deliverer)
+                {
+                    AmountOfDeliverers++;
                     listBox1.Items.Add(y);
+                }
             }
+
+            lblCountingPersons.Text = "Du har " + AmountOfCustemers + " kunder, " + AmountOfEmplooyees + " Ansälda och " + AmountOfDeliverers + " leverantörer.";
         }
 
         public void GUI()
@@ -129,7 +145,6 @@ namespace Person_regrister_Program
             lblInfoEmplooyeID.Visible = false;
             lblLastName.Visible = false;
             lblInfoEmplooyePay.Visible = false;
-            lblCountingPersons.Visible = false;
             lblInfoCompany.Visible = false;
 
             tbxInfoEmplooyeID.Visible = false;
@@ -158,6 +173,7 @@ namespace Person_regrister_Program
                 tbxInfoLastName.Text = b.LastName;
                 tbxInfoID.Text = b.CustemerID.ToString();
                 tbxInfoNumber.Text = b.Telefone;
+
             }
             else if (a is Emplooye)
             {
@@ -193,7 +209,10 @@ namespace Person_regrister_Program
                 tbxInfoConstatPerson.Text = b.ToString();
                 tbxInfoCompany.Text = b.Company;
                 tbxInfoNumber.Text = b.Telefone;
+
             }
+
+            
         }
 
         private void btnEmplooyeAdd_Click(object sender, EventArgs e)
@@ -206,6 +225,8 @@ namespace Person_regrister_Program
                 Pay = tbxEmplooyePay.Text,
                 Telefone = tbxEmplooyePhoneNumber.Text
             });
+
+            AmountOfEmplooyees++;
 
             tbxEmplooyeFirstName.Text = string.Empty;
             tbxEmplooyeLastName.Text = string.Empty;
