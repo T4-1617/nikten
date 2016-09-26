@@ -52,7 +52,7 @@
             this.lblSaldo = new System.Windows.Forms.Label();
             this.grpBoxTransactionsLog = new System.Windows.Forms.GroupBox();
             this.lbxTransactionsLog = new System.Windows.Forms.ListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxMoney = new System.Windows.Forms.TextBox();
             this.GroupBoxChoseAccount = new System.Windows.Forms.GroupBox();
             this.lbxAccounts = new System.Windows.Forms.ListBox();
             this.GroupBoxChoseCustomer = new System.Windows.Forms.GroupBox();
@@ -256,7 +256,7 @@
             this.GrpBoxAccountDetails.Controls.Add(this.grpBoxDoTransaction);
             this.GrpBoxAccountDetails.Controls.Add(this.lblSaldo);
             this.GrpBoxAccountDetails.Controls.Add(this.grpBoxTransactionsLog);
-            this.GrpBoxAccountDetails.Controls.Add(this.textBox1);
+            this.GrpBoxAccountDetails.Controls.Add(this.tbxMoney);
             this.GrpBoxAccountDetails.Location = new System.Drawing.Point(457, 27);
             this.GrpBoxAccountDetails.Name = "GrpBoxAccountDetails";
             this.GrpBoxAccountDetails.Size = new System.Drawing.Size(248, 378);
@@ -300,12 +300,12 @@
             this.lbxTransactionsLog.Size = new System.Drawing.Size(187, 147);
             this.lbxTransactionsLog.TabIndex = 0;
             // 
-            // textBox1
+            // tbxMoney
             // 
-            this.textBox1.Location = new System.Drawing.Point(23, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.tbxMoney.Location = new System.Drawing.Point(23, 44);
+            this.tbxMoney.Name = "tbxMoney";
+            this.tbxMoney.Size = new System.Drawing.Size(100, 20);
+            this.tbxMoney.TabIndex = 1;
             // 
             // GroupBoxChoseAccount
             // 
@@ -324,6 +324,7 @@
             this.lbxAccounts.Name = "lbxAccounts";
             this.lbxAccounts.Size = new System.Drawing.Size(176, 316);
             this.lbxAccounts.TabIndex = 0;
+            this.lbxAccounts.SelectedIndexChanged += new System.EventHandler(this.lbxAccounts_SelectedIndexChanged);
             // 
             // GroupBoxChoseCustomer
             // 
@@ -342,6 +343,7 @@
             this.lbxCustomers.Name = "lbxCustomers";
             this.lbxCustomers.Size = new System.Drawing.Size(178, 316);
             this.lbxCustomers.TabIndex = 0;
+            this.lbxCustomers.SelectedIndexChanged += new System.EventHandler(this.lbxCustomers_SelectedIndexChanged);
             // 
             // btnMenuAdd
             // 
@@ -413,7 +415,7 @@
         private System.Windows.Forms.Label lblSaldo;
         private System.Windows.Forms.GroupBox grpBoxTransactionsLog;
         private System.Windows.Forms.ListBox lbxTransactionsLog;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxMoney;
         private System.Windows.Forms.GroupBox GroupBoxChoseAccount;
         private System.Windows.Forms.ListBox lbxAccounts;
         private System.Windows.Forms.GroupBox GroupBoxChoseCustomer;

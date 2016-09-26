@@ -39,8 +39,6 @@ namespace online_Banking
         }
 
 
-
-
         private void btnCustAddCust_Click(object sender, EventArgs e)
         {
             if (controlSum(int.Parse(tbxCusStartCapital.Text)))
@@ -68,7 +66,35 @@ namespace online_Banking
         private void addCustomer(string fName, string lName, int startCapital)
         {
             customers.Add(new Customer(fName, lName, startCapital));
+            displayContentInListBox(lbxCustomers, customers);
         }
 
+        private void lbxCustomers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbxCustomers.SelectedIndex != -1)
+            {
+                Customer c = (Customer)lbxCustomers.SelectedItem;
+                displayContentInListBox(lbxAccounts, c.accounts);
+            }
+        }
+
+        private void lbxAccounts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbxAccounts.SelectedIndex != -1)
+            {
+                Account acc = (Account)lbxAccounts.SelectedItem;
+                tbxMoney.Text = acc.getMoney().ToString();
+            }
+        }
+
+
+        private void displayContentInListBox(ListBox lbox, System.Collections.ArrayList aList)
+        {
+            lbox.Items.Clear(); 
+            foreach (var obj in aList)
+            {
+                lbox.Items.Add(obj); 
+            }
+        }
     }
 }

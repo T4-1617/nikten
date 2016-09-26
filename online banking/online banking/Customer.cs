@@ -59,10 +59,8 @@ namespace online_Banking
             this.AccountNumber = AccountNumber;
         }
 
-        public bool isComplete = false;
-
-        public double Money { get; set; }
-        public System.Collections.ArrayList transactions = new System.Collections.ArrayList();
+        private double Money { get; set; }
+        private System.Collections.ArrayList transactions = new System.Collections.ArrayList();
 
         public long AccountNumber { get; set; }
         public void addTransaction(double value, string information)
