@@ -11,7 +11,7 @@ namespace online_Banking
     public class RandomGenerator
     {
 
-        RandomGenerator()
+        public RandomGenerator()
         {
         }
 
