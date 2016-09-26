@@ -8,6 +8,41 @@ namespace online_Banking
 {
 
 
+    public class RandomGenerator
+    {
+
+        RandomGenerator()
+        {
+        }
+
+        public System.Random randomGen = new System.Random();
+
+
+        private long genAccountID(System.Collections.ArrayList customers)
+        {
+            long random = 0;
+            bool uniqueID = false;
+            while (uniqueID == false)
+            {
+                random = randomGen.Next(10000000, 99999999);
+                uniqueID = true;
+
+                foreach (Customer cus in customers)
+                {
+                    foreach (Account acc in cus.accounts)
+                    {
+                        if (acc.AccountNumber == random)
+                            uniqueID = false;
+                    }
+                }
+            }
+            return random;
+        }
+
+
+    }
+
+
     public class Customer
     {
 
@@ -45,6 +80,10 @@ namespace online_Banking
             else
                 return false;
         }
+
+
+
+
     }
 
 
@@ -66,7 +105,14 @@ namespace online_Banking
         public void addTransaction(double value, string information)
         {
             Transaction t = new Transaction(value, information);
+            this.Money += value;
             transactions.Add(t);
+        }
+
+
+        public System.Collections.ArrayList getTransactionsList()
+        {
+            return transactions;
         }
 
 
@@ -89,6 +135,11 @@ namespace online_Banking
         {
             this.money = money;
             this.information = information;
+        }
+
+        public override string ToString()
+        {
+            return String.Format("{0}: {1}", information, money.ToString());
         }
 
         public double money { get; set; }

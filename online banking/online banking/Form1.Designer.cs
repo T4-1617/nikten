@@ -59,10 +59,15 @@
             this.lbxCustomers = new System.Windows.Forms.ListBox();
             this.btnMenuAdd = new System.Windows.Forms.Button();
             this.btnMenuAccBrowse = new System.Windows.Forms.Button();
+            this.tbxDoTransactionValue = new System.Windows.Forms.TextBox();
+            this.btnDebit = new System.Windows.Forms.Button();
+            this.btnCredit = new System.Windows.Forms.Button();
+            this.btnAddAcc = new System.Windows.Forms.Button();
             this.GrpBoxCusAdd.SuspendLayout();
             this.GrpBoxEmpAdd.SuspendLayout();
             this.GrpBoxBrowse.SuspendLayout();
             this.GrpBoxAccountDetails.SuspendLayout();
+            this.grpBoxDoTransaction.SuspendLayout();
             this.grpBoxTransactionsLog.SuspendLayout();
             this.GroupBoxChoseAccount.SuspendLayout();
             this.GroupBoxChoseCustomer.SuspendLayout();
@@ -217,6 +222,7 @@
             this.btnEmpAddCust.TabIndex = 2;
             this.btnEmpAddCust.Text = "Lägg till en kund";
             this.btnEmpAddCust.UseVisualStyleBackColor = true;
+            this.btnEmpAddCust.Click += new System.EventHandler(this.btnEmpAddCust_Click);
             // 
             // tbxEmpStartCapital
             // 
@@ -266,6 +272,9 @@
             // 
             // grpBoxDoTransaction
             // 
+            this.grpBoxDoTransaction.Controls.Add(this.btnCredit);
+            this.grpBoxDoTransaction.Controls.Add(this.btnDebit);
+            this.grpBoxDoTransaction.Controls.Add(this.tbxDoTransactionValue);
             this.grpBoxDoTransaction.Location = new System.Drawing.Point(23, 81);
             this.grpBoxDoTransaction.Name = "grpBoxDoTransaction";
             this.grpBoxDoTransaction.Size = new System.Drawing.Size(200, 112);
@@ -309,10 +318,11 @@
             // 
             // GroupBoxChoseAccount
             // 
+            this.GroupBoxChoseAccount.Controls.Add(this.btnAddAcc);
             this.GroupBoxChoseAccount.Controls.Add(this.lbxAccounts);
             this.GroupBoxChoseAccount.Location = new System.Drawing.Point(244, 42);
             this.GroupBoxChoseAccount.Name = "GroupBoxChoseAccount";
-            this.GroupBoxChoseAccount.Size = new System.Drawing.Size(200, 346);
+            this.GroupBoxChoseAccount.Size = new System.Drawing.Size(200, 363);
             this.GroupBoxChoseAccount.TabIndex = 0;
             this.GroupBoxChoseAccount.TabStop = false;
             this.GroupBoxChoseAccount.Text = "Välj kontot";
@@ -363,6 +373,43 @@
             this.btnMenuAccBrowse.Text = "button2";
             this.btnMenuAccBrowse.UseVisualStyleBackColor = true;
             // 
+            // tbxDoTransactionValue
+            // 
+            this.tbxDoTransactionValue.Location = new System.Drawing.Point(19, 19);
+            this.tbxDoTransactionValue.Name = "tbxDoTransactionValue";
+            this.tbxDoTransactionValue.Size = new System.Drawing.Size(100, 20);
+            this.tbxDoTransactionValue.TabIndex = 0;
+            // 
+            // btnDebit
+            // 
+            this.btnDebit.Location = new System.Drawing.Point(104, 54);
+            this.btnDebit.Name = "btnDebit";
+            this.btnDebit.Size = new System.Drawing.Size(75, 23);
+            this.btnDebit.TabIndex = 1;
+            this.btnDebit.Text = "Ta ut";
+            this.btnDebit.UseVisualStyleBackColor = true;
+            this.btnDebit.Click += new System.EventHandler(this.btnDebit_Click);
+            // 
+            // btnCredit
+            // 
+            this.btnCredit.Location = new System.Drawing.Point(19, 54);
+            this.btnCredit.Name = "btnCredit";
+            this.btnCredit.Size = new System.Drawing.Size(75, 23);
+            this.btnCredit.TabIndex = 3;
+            this.btnCredit.Text = "Sätta in";
+            this.btnCredit.UseVisualStyleBackColor = true;
+            this.btnCredit.Click += new System.EventHandler(this.btnCredit_Click);
+            // 
+            // btnAddAcc
+            // 
+            this.btnAddAcc.Location = new System.Drawing.Point(7, 335);
+            this.btnAddAcc.Name = "btnAddAcc";
+            this.btnAddAcc.Size = new System.Drawing.Size(117, 23);
+            this.btnAddAcc.TabIndex = 5;
+            this.btnAddAcc.Text = "Skapa ett till konto";
+            this.btnAddAcc.UseVisualStyleBackColor = true;
+            this.btnAddAcc.Click += new System.EventHandler(this.btnAddAcc_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,6 +431,8 @@
             this.GrpBoxBrowse.ResumeLayout(false);
             this.GrpBoxAccountDetails.ResumeLayout(false);
             this.GrpBoxAccountDetails.PerformLayout();
+            this.grpBoxDoTransaction.ResumeLayout(false);
+            this.grpBoxDoTransaction.PerformLayout();
             this.grpBoxTransactionsLog.ResumeLayout(false);
             this.GroupBoxChoseAccount.ResumeLayout(false);
             this.GroupBoxChoseCustomer.ResumeLayout(false);
@@ -425,6 +474,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnMenuAdd;
         private System.Windows.Forms.Button btnMenuAccBrowse;
+        private System.Windows.Forms.Button btnCredit;
+        private System.Windows.Forms.Button btnDebit;
+        private System.Windows.Forms.TextBox tbxDoTransactionValue;
+        private System.Windows.Forms.Button btnAddAcc;
     }
 }
 
