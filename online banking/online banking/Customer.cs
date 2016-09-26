@@ -18,7 +18,7 @@ namespace online_Banking
         public System.Random randomGen = new System.Random();
 
 
-        private long genAccountID(System.Collections.ArrayList customers)
+        public long genAccountID(System.Collections.ArrayList customers)
         {
             long random = 0;
             bool uniqueID = false;
@@ -46,11 +46,11 @@ namespace online_Banking
     public class Customer
     {
 
-        public Customer(string fName, string lName, int startCap)
+        public Customer(string fName, string lName, int startCap, long generatedID)
         {
             this.fName = fName;
             this.lName = lName;
-            createAccount(startCap, 1337);
+            createAccount(startCap, generatedID);
         }
 
         private string fName { get; set; }

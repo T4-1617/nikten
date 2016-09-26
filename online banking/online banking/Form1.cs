@@ -15,7 +15,7 @@ namespace online_Banking
         private bool isCustomer = true;
 
         System.Collections.ArrayList customers;
-        RandomGenerator rg = new RandomGenerator();
+        public RandomGenerator rg = new RandomGenerator();
 
         public Form1()
         {
@@ -68,7 +68,7 @@ namespace online_Banking
 
         private void addCustomer(string fName, string lName, int startCapital)
         {
-            customers.Add(new Customer(fName, lName, startCapital));
+            customers.Add(new Customer(fName, lName, startCapital, rg.genAccountID(customers)));
             displayContentInListBox(lbxCustomers, customers);
         }
 
@@ -150,7 +150,7 @@ namespace online_Banking
             if (lbxCustomers.SelectedIndex != -1)
             {
                 Customer cus = (Customer)lbxCustomers.SelectedItem;
-                cus.accounts.Add(new Account(0, 1337));
+                cus.accounts.Add(new Account(0, rg.genAccountID(customers)));
                 lbxCustomers_SelectedIndexChanged(sender, e);
             }
         }
