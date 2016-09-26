@@ -22,16 +22,20 @@ namespace online_Banking
             InitializeComponent();
 
             customers = new System.Collections.ArrayList();
+
+            RestoreGUI();
         }
 
         private void rbtnCus_CheckedChanged(object sender, EventArgs e)
         {
             isCustomer = true;
+            RestoreGUI();
         }
 
         private void rbtnEmp_CheckedChanged(object sender, EventArgs e)
         {
             isCustomer = false;
+            RestoreGUI();
         }
 
         private void btnCustAddCust_Click(object sender, EventArgs e)
@@ -44,6 +48,8 @@ namespace online_Banking
             {
                 MessageBox.Show("För lite pengar. Minimum är 500 SEK.");
             }
+
+            RestoreGUI();
         }
 
         private void btnEmpAddCust_Click(object sender, EventArgs e)
@@ -56,6 +62,8 @@ namespace online_Banking
             {
                 MessageBox.Show("För lite pengar. Minimum är 500 SEK.");
             }
+
+            RestoreGUI();
         }
 
         private bool controlSum(int sum)
@@ -81,6 +89,9 @@ namespace online_Banking
                 lbxAccounts.SelectedIndex = -1;
                 updateAccountDetails();
             }
+
+            grpBoxChoseAccount.Visible = true;
+
         }
 
         private void lbxAccounts_SelectedIndexChanged(object sender, EventArgs e)
@@ -89,6 +100,7 @@ namespace online_Banking
             {
                 updateAccountDetails();
             }
+            GrpBoxAccountDetails.Visible = true;
         }
 
         private void displayContentInListBox(ListBox lbox, System.Collections.ArrayList aList)
@@ -108,7 +120,7 @@ namespace online_Banking
         private void btnDebit_Click(object sender, EventArgs e)
         {
             Account acc = (Account)lbxAccounts.SelectedItem;
-            if (acc.getMoney() > (int.Parse(tbxDoTransactionValue.Text) + 500))
+            if (acc.getMoney() >= (int.Parse(tbxDoTransactionValue.Text) + 500))
                 doTransaction("Uttag", -int.Parse(tbxDoTransactionValue.Text));
             else
                 MessageBox.Show("Du får inte ta ut så stor summa för att ditt saldo hamnar under 500 SEK.");
@@ -133,7 +145,6 @@ namespace online_Banking
                 else
                 {
                     grpBoxTransactionsLog.Visible = true;
-
                     displayContentInListBox(lbxTransactionsLog, acc.getTransactionsList());
                 }
 
@@ -153,6 +164,45 @@ namespace online_Banking
                 cus.accounts.Add(new Account(0, rg.genAccountID(customers)));
                 lbxCustomers_SelectedIndexChanged(sender, e);
             }
+        }
+
+        private void btnMenuAdd_Click(object sender, EventArgs e)
+        {
+            RestoreGUI();
+            if (rbtnCus.Checked)
+            {
+                GrpBoxCusAdd.Visible = true;
+                GrpBoxEmpAdd.Visible = false;
+            }
+            else
+            {
+                GrpBoxCusAdd.Visible = false;
+                GrpBoxEmpAdd.Visible = true;
+            }
+        }
+
+        public void RestoreGUI()
+        {
+            GrpBoxAccountDetails.Visible = false;
+            GrpBoxBrowse.Visible = false;
+            GrpBoxCusAdd.Visible = false;
+            GrpBoxEmpAdd.Visible = false;
+            grpBoxChoseAccount.Visible = false;
+            lbxAccounts.SelectedIndex = -1;
+            lbxCustomers.SelectedIndex = -1;
+            lbxTransactionsLog.SelectedIndex = -1;
+            tbxCusFName.Text = string.Empty;
+            tbxCusLName.Text = string.Empty;
+            tbxCusStartCapital.Text = string.Empty;
+            tbxEmpFName.Text = string.Empty;
+            tbxEmpLName.Text = string.Empty;
+            tbxEmpStartCapital.Text = string.Empty;
+        }
+
+        private void btnMenuAccBrowse_Click(object sender, EventArgs e)
+        {
+            RestoreGUI();
+            GrpBoxBrowse.Visible = true;
         }
     }
 }

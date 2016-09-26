@@ -53,7 +53,7 @@
             this.grpBoxTransactionsLog = new System.Windows.Forms.GroupBox();
             this.lbxTransactionsLog = new System.Windows.Forms.ListBox();
             this.tbxMoney = new System.Windows.Forms.TextBox();
-            this.GroupBoxChoseAccount = new System.Windows.Forms.GroupBox();
+            this.grpBoxChoseAccount = new System.Windows.Forms.GroupBox();
             this.lbxAccounts = new System.Windows.Forms.ListBox();
             this.GroupBoxChoseCustomer = new System.Windows.Forms.GroupBox();
             this.lbxCustomers = new System.Windows.Forms.ListBox();
@@ -69,7 +69,7 @@
             this.GrpBoxAccountDetails.SuspendLayout();
             this.grpBoxDoTransaction.SuspendLayout();
             this.grpBoxTransactionsLog.SuspendLayout();
-            this.GroupBoxChoseAccount.SuspendLayout();
+            this.grpBoxChoseAccount.SuspendLayout();
             this.GroupBoxChoseCustomer.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -248,7 +248,7 @@
             // GrpBoxBrowse
             // 
             this.GrpBoxBrowse.Controls.Add(this.GrpBoxAccountDetails);
-            this.GrpBoxBrowse.Controls.Add(this.GroupBoxChoseAccount);
+            this.GrpBoxBrowse.Controls.Add(this.grpBoxChoseAccount);
             this.GrpBoxBrowse.Controls.Add(this.GroupBoxChoseCustomer);
             this.GrpBoxBrowse.Location = new System.Drawing.Point(186, 216);
             this.GrpBoxBrowse.Name = "GrpBoxBrowse";
@@ -316,16 +316,16 @@
             this.tbxMoney.Size = new System.Drawing.Size(100, 20);
             this.tbxMoney.TabIndex = 1;
             // 
-            // GroupBoxChoseAccount
+            // grpBoxChoseAccount
             // 
-            this.GroupBoxChoseAccount.Controls.Add(this.btnAddAcc);
-            this.GroupBoxChoseAccount.Controls.Add(this.lbxAccounts);
-            this.GroupBoxChoseAccount.Location = new System.Drawing.Point(244, 42);
-            this.GroupBoxChoseAccount.Name = "GroupBoxChoseAccount";
-            this.GroupBoxChoseAccount.Size = new System.Drawing.Size(200, 363);
-            this.GroupBoxChoseAccount.TabIndex = 0;
-            this.GroupBoxChoseAccount.TabStop = false;
-            this.GroupBoxChoseAccount.Text = "Välj kontot";
+            this.grpBoxChoseAccount.Controls.Add(this.btnAddAcc);
+            this.grpBoxChoseAccount.Controls.Add(this.lbxAccounts);
+            this.grpBoxChoseAccount.Location = new System.Drawing.Point(244, 42);
+            this.grpBoxChoseAccount.Name = "grpBoxChoseAccount";
+            this.grpBoxChoseAccount.Size = new System.Drawing.Size(200, 363);
+            this.grpBoxChoseAccount.TabIndex = 0;
+            this.grpBoxChoseAccount.TabStop = false;
+            this.grpBoxChoseAccount.Text = "Välj kontot";
             // 
             // lbxAccounts
             // 
@@ -359,19 +359,21 @@
             // 
             this.btnMenuAdd.Location = new System.Drawing.Point(13, 120);
             this.btnMenuAdd.Name = "btnMenuAdd";
-            this.btnMenuAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnMenuAdd.Size = new System.Drawing.Size(74, 40);
             this.btnMenuAdd.TabIndex = 3;
-            this.btnMenuAdd.Text = "button1";
+            this.btnMenuAdd.Text = "Skapen en ny kund";
             this.btnMenuAdd.UseVisualStyleBackColor = true;
+            this.btnMenuAdd.Click += new System.EventHandler(this.btnMenuAdd_Click);
             // 
             // btnMenuAccBrowse
             // 
-            this.btnMenuAccBrowse.Location = new System.Drawing.Point(12, 150);
+            this.btnMenuAccBrowse.Location = new System.Drawing.Point(13, 166);
             this.btnMenuAccBrowse.Name = "btnMenuAccBrowse";
-            this.btnMenuAccBrowse.Size = new System.Drawing.Size(75, 23);
+            this.btnMenuAccBrowse.Size = new System.Drawing.Size(75, 43);
             this.btnMenuAccBrowse.TabIndex = 4;
-            this.btnMenuAccBrowse.Text = "button2";
+            this.btnMenuAccBrowse.Text = "Se lista på kunder";
             this.btnMenuAccBrowse.UseVisualStyleBackColor = true;
+            this.btnMenuAccBrowse.Click += new System.EventHandler(this.btnMenuAccBrowse_Click);
             // 
             // tbxDoTransactionValue
             // 
@@ -434,7 +436,7 @@
             this.grpBoxDoTransaction.ResumeLayout(false);
             this.grpBoxDoTransaction.PerformLayout();
             this.grpBoxTransactionsLog.ResumeLayout(false);
-            this.GroupBoxChoseAccount.ResumeLayout(false);
+            this.grpBoxChoseAccount.ResumeLayout(false);
             this.GroupBoxChoseCustomer.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -465,7 +467,7 @@
         private System.Windows.Forms.GroupBox grpBoxTransactionsLog;
         private System.Windows.Forms.ListBox lbxTransactionsLog;
         private System.Windows.Forms.TextBox tbxMoney;
-        private System.Windows.Forms.GroupBox GroupBoxChoseAccount;
+        private System.Windows.Forms.GroupBox grpBoxChoseAccount;
         private System.Windows.Forms.ListBox lbxAccounts;
         private System.Windows.Forms.GroupBox GroupBoxChoseCustomer;
         private System.Windows.Forms.ListBox lbxCustomers;
