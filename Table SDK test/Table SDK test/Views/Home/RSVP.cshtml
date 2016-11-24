@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "RSTV";
+}
+
+<h2>RSTV</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+    <p>Namn: @Html.TextBox("Name")</p>
+        <p>Telefon: @Html.TextBox("Phone")</p>
+        <button type="submit">Skicka</button>
+}
